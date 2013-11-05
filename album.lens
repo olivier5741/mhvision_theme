@@ -22,12 +22,18 @@
         <koken:link>
           <koken:img />
         </koken:link>
-		<koken:categories>
-		  Catégorie :
-		  <koken:loop separator=", ">
-			  {{ category.title }}
-		  </koken:loop>
-		</koken:categories>
+		<koken:has_category title="Homme">
+		  Homme
+		<koken:else>
+		</koken:has_category>	
+		<koken:has_category title="Femme">
+		  Femme
+		<koken:else>
+		</koken:has_category>
+		<koken:has_category title="Kit Correction Optique">
+		  Kit Correction Optique
+		<koken:else>
+		</koken:has_category>
       </li>
     </koken:loop>
   </ol>
