@@ -22,6 +22,14 @@
         <koken:link>
           <koken:img />
         </koken:link>
+		<koken:categories>
+		  Catégorie :
+		  <koken:loop separator=", ">
+			<koken:link>
+			  {{ category.title }}
+			</koken:link>
+		  </koken:loop>
+		</koken:categories>
       </li>
     </koken:loop>
   </ol>

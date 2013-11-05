@@ -18,7 +18,7 @@
     <koken:loop>
       <li>
         <koken:link>
-          <koken:img size="3:2" />
+          <koken:img/>
         </koken:link>
         <h2> 
           <koken:link>
