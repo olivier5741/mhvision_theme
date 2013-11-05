@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="author" content="{{ site.title }}" />
+  <meta name="keywords" content="{{ site.keywords }}" />
+  <koken:title />
+  <koken:settings />
+</head>
+<body>
+<header>
+  <h1>{{ site.title }}</h1> 
+  <nav>
+    <koken:navigation />
+  </nav>
+</header>
+<koken:load>
+  <h2>{{ album.title }}</h2>
+  {{ album.description paragraphs="true" }} 
+  <p>
+  <koken:time />
+  </p>
+  <ol class="grid">
+    <koken:loop>
+      <li>
+        <koken:link>
+          <koken:img />
+        </koken:link>
+      </li>
+    </koken:loop>
+  </ol>
+<koken:else>
+  <koken:note>
+    No album data found 
+  </koken:note>
+</koken:load>
+<footer>
+  {{ site.copyright }} 
+</footer>
+</body>
+</html>
