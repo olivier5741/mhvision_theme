@@ -19,21 +19,28 @@
   <ol class="grid">
     <koken:loop>
       <li>
-        <koken:link>
-          <koken:img />
-        </koken:link>
-		<koken:has_category title="Homme">
-		  Homme
-		<koken:else>
+		<koken:has_category title="Homme">	
+			
+			<koken:has_category title="Femme">
+				<p>Homme/Femme</p>
+			<koken:else>						
+				<p>Homme</p>					
+			</koken:has_category>			  
+		<koken:else>		
 		</koken:has_category>	
 		<koken:has_category title="Femme">
-		  Femme
-		<koken:else>
+		  <p>Femme</p>
+		<koken:else>		
 		</koken:has_category>
+        <koken:link>
+          <koken:img />
+        </koken:link>	
+		
 		<koken:has_category title="Kit Correction Optique">
-		  Kit Correction Optique
+		  <p>Kit Correction Optique</p>
 		<koken:else>
 		</koken:has_category>
+		
       </li>
     </koken:loop>
   </ol>
