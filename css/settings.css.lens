@@ -5,8 +5,10 @@ img {
 }
 
 ol.grid li {
+  vertical-align:text-top;
   list-style:none;
   display:inline-block;
   margin:0 10px 10px 0;
-  width:15%;
+  min-width:250px;
+  width:30%;
 }

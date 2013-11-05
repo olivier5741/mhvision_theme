@@ -19,6 +19,11 @@
   <ol class="grid">
     <koken:loop>
       <li>
+		
+		<div>
+	  
+		{{ content.title }}
+	  
 		<koken:has_category title="Homme">				
 			<koken:has_category title="Femme">
 				<p>Homme/Femme</p>
@@ -29,9 +34,20 @@
 			<koken:has_category title="Femme">			  
 				<p>Femme<p>
 			<koken:else>		
-				<p></p>
+				<koken:has_category title="Enfant">			  
+					<p>Enfant<p>
+				<koken:else>		
+					<koken:has_category title="Junior">			  
+						<p>Junior<p>
+					<koken:else>
+						<p>
+						<br />
+						</p>
+					</koken:has_category>
+				</koken:has_category>
 			</koken:has_category>		
-		</koken:has_category>			
+		</koken:has_category>	
+		
         <koken:link>
           <koken:img />
         </koken:link>	
@@ -39,8 +55,16 @@
 		<koken:has_category title="Kit Correction Optique">
 		  <p>Kit Correction Optique</p>
 		<koken:else>
-			<p></p>
+			<p> </p>
 		</koken:has_category>
+		
+		<koken:has_category title="Cordon">
+		  <p>Cordon</p>
+		<koken:else>
+			<p> </p>
+		</koken:has_category>
+		
+		</div>
 		
       </li>
     </koken:loop>
