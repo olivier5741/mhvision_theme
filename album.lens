@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <head>
   <meta name="description" content="{{ site.description }}" />
   <meta name="author" content="{{ site.title }}" />
@@ -23,11 +23,9 @@
           <koken:img />
         </koken:link>
 		<koken:categories>
-		  Cat�gorie :
+		  Catégorie :
 		  <koken:loop separator=", ">
-			<koken:link>
 			  {{ category.title }}
-			</koken:link>
 		  </koken:loop>
 		</koken:categories>
       </li>
