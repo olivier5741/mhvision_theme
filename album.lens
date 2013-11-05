@@ -16,9 +16,6 @@
 <koken:load>
   <h2>{{ album.title }}</h2>
   {{ album.description paragraphs="true" }} 
-  <p>
-  <koken:time />
-  </p>
   <ol class="grid">
     <koken:loop>
       <li>
@@ -34,7 +31,6 @@
   </koken:note>
 </koken:load>
 <footer>
-  {{ site.copyright }} 
 </footer>
 </body>
 </html>
