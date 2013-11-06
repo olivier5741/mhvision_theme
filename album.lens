@@ -13,6 +13,7 @@
     <koken:navigation />
   </nav>
 </header>
+
 <koken:load>
   <h2>{{ album.title }}</h2>
   {{ album.description paragraphs="true" }} 
@@ -23,6 +24,7 @@
 		<div>
 	  
 		{{ content.title }}
+		
 		
 		<koken:has_category title="Alpina">
 			<p class="brand">Alpina</p>
@@ -43,7 +45,7 @@
 								<p class="brand">Demetz</p>
 							<koken:else>						
 								<koken:has_category title="Dutz">
-									<p class="brand">Dutz</p>
+									<img class="brand" src="../dev/storage/own_image/dutz.png" class="brand" alt="Dutz"/>
 								<koken:else>								
 									<koken:has_category title="Peltor">
 										<p class="brand">Peltor</p>
@@ -88,6 +90,8 @@
 			</koken:has_category>		
 		</koken:has_category>	
 		
+		</div>
+		
         <koken:link>
           <koken:img />
         </koken:link>	
@@ -101,8 +105,6 @@
 		  <p>Cordon</p>
 		<koken:else>
 		</koken:has_category>
-		
-		</div>
 		
       </li>
     </koken:loop>

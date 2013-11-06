@@ -4,7 +4,17 @@ img {
   height:auto;
 }
 
-ol.grid li {
+img.brand {
+  width:auto;
+  height:auto;
+  float:right;
+}
+
+ol.grid li div {
+  background-image:linear-gradient(to left, white, #AFCE53);
+}
+
+ol.grid li {  
   vertical-align:text-top;
   list-style:none;
   display:inline-block;
@@ -13,7 +23,3 @@ ol.grid li {
   width:30%;
 }
 
-.brand {
-  float:right;
-  margin:15px 45px;
-}
