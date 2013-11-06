@@ -23,8 +23,7 @@
 		
 		<div>
 	  
-		{{ content.title }}
-		
+		{{ content.title }}		
 		
 		<koken:has_category title="Alpina">
 			<p class="brand">Alpina</p>
