@@ -23,6 +23,20 @@
 		<div>
 	  
 		{{ content.title }}
+		
+		<koken:has_category title="Demetz">
+			<p class="brand">Demetz</p>
+		<koken:else>						
+			<koken:has_category title="Alpina">
+				<p class="brand">Alpina</p>
+			<koken:else>						
+				<koken:has_category title="Coozy">
+					<p class="brand">Coozy</p>
+				<koken:else>						
+					<p class="brand"><br /></p>					
+				</koken:has_category>					
+			</koken:has_category>				
+		</koken:has_category>
 	  
 		<koken:has_category title="Homme">				
 			<koken:has_category title="Femme">

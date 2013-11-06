@@ -12,3 +12,8 @@ ol.grid li {
   min-width:250px;
   width:30%;
 }
+
+.brand {
+  float:right;
+  margin:15px 45px;
+}
