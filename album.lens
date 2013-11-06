@@ -24,16 +24,44 @@
 	  
 		{{ content.title }}
 		
-		<koken:has_category title="Demetz">
-			<p class="brand">Demetz</p>
+		<koken:has_category title="Alpina">
+			<p class="brand">Alpina</p>
 		<koken:else>						
-			<koken:has_category title="Alpina">
-				<p class="brand">Alpina</p>
+			<koken:has_category title="Bausch and Lomb">
+				<p class="brand">Bausch and Lomb</p>
 			<koken:else>						
-				<koken:has_category title="Coozy">
-					<p class="brand">Coozy</p>
-				<koken:else>						
-					<p class="brand"><br /></p>					
+				<koken:has_category title="Bollé Safety">
+					<p class="brand">Bollé Safety</p>
+				<koken:else>								
+					<koken:has_category title="Ciba Vision">
+						<p class="brand">Ciba Vision</p>
+					<koken:else>						
+						<koken:has_category title="Coozy">
+							<p class="brand">Coozy</p>
+						<koken:else>						
+							<koken:has_category title="Demetz">
+								<p class="brand">Demetz</p>
+							<koken:else>						
+								<koken:has_category title="Dutz">
+									<p class="brand">Dutz</p>
+								<koken:else>								
+									<koken:has_category title="Peltor">
+										<p class="brand">Peltor</p>
+									<koken:else>						
+										<koken:has_category title="Rec Specs">
+											<p class="brand">Rec Specs</p>
+										<koken:else>						
+											<koken:has_category title="Titmus">
+												<p class="brand">Titmus</p>
+											<koken:else>		
+												<pclass="brand"><br/></p>					
+											</koken:has_category>					
+										</koken:has_category>					
+									</koken:has_category>					
+								</koken:has_category>				
+							</koken:has_category>					
+						</koken:has_category>					
+					</koken:has_category>					
 				</koken:has_category>					
 			</koken:has_category>				
 		</koken:has_category>
@@ -54,9 +82,7 @@
 					<koken:has_category title="Junior">			  
 						<p>Junior<p>
 					<koken:else>
-						<p>
-						<br />
-						</p>
+						<p><br /></p>
 					</koken:has_category>
 				</koken:has_category>
 			</koken:has_category>		
@@ -69,13 +95,11 @@
 		<koken:has_category title="Kit Correction Optique">
 		  <p>Kit Correction Optique</p>
 		<koken:else>
-			<p> </p>
 		</koken:has_category>
 		
 		<koken:has_category title="Cordon">
 		  <p>Cordon</p>
 		<koken:else>
-			<p> </p>
 		</koken:has_category>
 		
 		</div>
@@ -85,7 +109,7 @@
   </ol>
 <koken:else>
   <koken:note>
-    No album data found 
+    Pas d'album trouvé
   </koken:note>
 </koken:load>
 <footer>
