@@ -6,7 +6,7 @@ img {
 
 img.brand {
   width:auto;
-  height:auto;
+  height:50px;
   float:right;
 }
 
