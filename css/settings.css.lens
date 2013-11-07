@@ -11,7 +11,8 @@ img.brand {
 }
 
 ol.grid li div {
-  background-image:linear-gradient(to left, white, #AFCE53);
+  background-image:linear-gradient(to left, white, #CDD3D3);
+  height:50px;
 }
 
 ol.grid li {  

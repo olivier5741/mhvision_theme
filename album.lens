@@ -14,80 +14,93 @@
   </nav>
 </header>
 
+
+
 <koken:load>
   <h2>{{ album.title }}</h2>
   {{ album.description paragraphs="true" }} 
-  <ol class="grid">
+  
+  <div class="album-container">
+  
+  <ol class="album-grid">
     <koken:loop>
-      <li>
-		
-		<div>
-	  
-		{{ content.title }}		
-		
-		<koken:has_category title="Alpina">
-			<p class="brand">Alpina</p>
-		<koken:else>						
-			<koken:has_category title="Bausch and Lomb">
-				<p class="brand">Bausch and Lomb</p>
-			<koken:else>						
-				<koken:has_category title="Bollé Safety">
-					<p class="brand">Bollé Safety</p>
-				<koken:else>								
-					<koken:has_category title="Ciba Vision">
-						<p class="brand">Ciba Vision</p>
-					<koken:else>						
-						<koken:has_category title="Coozy">
-							<p class="brand">Coozy</p>
-						<koken:else>						
-							<koken:has_category title="Demetz">
-								<p class="brand">Demetz</p>
+      <li>		
+		<ol class="album-content-grid">
+			<li>
+				<ol class="album-text-content-grid">
+					<li>
+						{{ content.title }}	
+					</li>	
+					<li>	  
+						<koken:has_category title="Homme">				
+							<koken:has_category title="Femme">
+								<p>Homme/Femme</p>
 							<koken:else>						
-								<koken:has_category title="Dutz">
-									<img class="brand" src="../dev/storage/own_image/dutz.png" class="brand" alt="Dutz"/>
-								<koken:else>								
-									<koken:has_category title="Peltor">
-										<p class="brand">Peltor</p>
+								<p>Homme</p>					
+							</koken:has_category>			  
+						<koken:else>	
+							<koken:has_category title="Femme">			  
+								<p>Femme<p>
+							<koken:else>		
+								<koken:has_category title="Enfant">			  
+									<p>Enfant<p>
+								<koken:else>		
+									<koken:has_category title="Junior">			  
+										<p>Junior<p>
+									<koken:else>
+										<p><br /></p>
+									</koken:has_category>
+								</koken:has_category>
+							</koken:has_category>		
+						</koken:has_category>	
+					</li>
+				</ol>
+			</li>
+			<li>
+				<koken:has_category title="Alpina">
+					<p class="brand">Alpina</p>
+				<koken:else>						
+					<koken:has_category title="Bausch and Lomb">
+						<p class="brand">Bausch and Lomb</p>
+					<koken:else>						
+						<koken:has_category title="Bollé Safety">
+							<p class="brand">Bollé Safety</p>
+						<koken:else>								
+							<koken:has_category title="Ciba Vision">
+								<p class="brand">Ciba Vision</p>
+							<koken:else>						
+								<koken:has_category title="Coozy">
+									<p class="brand">Coozy</p>
+								<koken:else>						
+									<koken:has_category title="Demetz">
+										<p class="brand">Demetz</p>
 									<koken:else>						
-										<koken:has_category title="Rec Specs">
-											<p class="brand">Rec Specs</p>
-										<koken:else>						
-											<koken:has_category title="Titmus">
-												<p class="brand">Titmus</p>
-											<koken:else>		
-												<pclass="brand"><br/></p>					
+										<koken:has_category title="Dutz">
+											<img class="brand" src="../dev/storage/own_image/dutz.png" class="brand" alt="Dutz"/>
+										<koken:else>								
+											<koken:has_category title="Peltor">
+												<p class="brand">Peltor</p>
+											<koken:else>						
+												<koken:has_category title="Rec Specs">
+													<p class="brand">Rec Specs</p>
+												<koken:else>						
+													<koken:has_category title="Titmus">
+														<p class="brand">Titmus</p>
+													<koken:else>		
+														<pclass="brand"><br/></p>					
+													</koken:has_category>					
+												</koken:has_category>					
 											</koken:has_category>					
-										</koken:has_category>					
+										</koken:has_category>				
 									</koken:has_category>					
-								</koken:has_category>				
+								</koken:has_category>					
 							</koken:has_category>					
 						</koken:has_category>					
-					</koken:has_category>					
-				</koken:has_category>					
-			</koken:has_category>				
-		</koken:has_category>
-	  
-		<koken:has_category title="Homme">				
-			<koken:has_category title="Femme">
-				<p>Homme/Femme</p>
-			<koken:else>						
-				<p>Homme</p>					
-			</koken:has_category>			  
-		<koken:else>	
-			<koken:has_category title="Femme">			  
-				<p>Femme<p>
-			<koken:else>		
-				<koken:has_category title="Enfant">			  
-					<p>Enfant<p>
-				<koken:else>		
-					<koken:has_category title="Junior">			  
-						<p>Junior<p>
-					<koken:else>
-						<p><br /></p>
-					</koken:has_category>
+					</koken:has_category>				
 				</koken:has_category>
-			</koken:has_category>		
-		</koken:has_category>	
+			</li>
+		
+		</ol>
 		
 		</div>
 		
@@ -108,6 +121,7 @@
       </li>
     </koken:loop>
   </ol>
+  </div>
 <koken:else>
   <koken:note>
     Pas d'album trouvé
