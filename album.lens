@@ -27,12 +27,21 @@
     			<li>
     				{{ content.title }}	
     			</li>	
-    			<li>	             
+          <li>
+            
+                <koken:has_category title="Homme">
+                <koken:link>
+                  {{ category.title }}
+                </koken:link>
+                <koken:else>
+                </koken:has_category>
+          </li>
+    			<li>	 
     				<koken:has_category title="Homme">				
     					<koken:has_category title="Femme">
     						<p>Homme/Femme</p>
-    					<koken:else>						
-    						<p>Homme</p>					
+    					<koken:else>				
+    						<p>Homme</p>				
     					</koken:has_category>			  
     				<koken:else>	
     					<koken:has_category title="Femme">			  
