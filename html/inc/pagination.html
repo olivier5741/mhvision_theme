@@ -1,0 +1,45 @@
+<!-- Paginates data for index page this is included in. Limit to 20 page links. -->
+<koken:pagination limit="10">
+
+	<div id="pagination">
+
+		<span class="previous">
+			<koken:pagination_previous>
+				<koken:link title="Previous" bind_to_key="left">
+					&lt;
+				</koken:link>
+			</koken:pagination_previous>
+		</span>
+
+		<span class="after-previous">
+			<koken:pagination_limited_previous>
+				<koken:link>...</koken:link>
+			</koken:pagination_limited_previous>
+		</span>
+
+		<span class="number">
+			<koken:loop>
+				<koken:link class="{{ is_current }}" title="{{ number }}">
+					{{ number }}
+				</koken:link>
+				&nbsp;
+			</koken:loop>
+		</span>
+
+		<span>
+			<koken:pagination_limited_next>
+				<koken:link>...</koken:link>
+			</koken:pagination_limited_next>
+		</span>
+
+		<span class="next">
+			<koken:pagination_next>
+				<koken:link title="Next" bind_to_key="right">
+					&gt;
+				</koken:link>
+			</koken:pagination_next>
+		</span>
+
+	</div>
+
+</koken:pagination>
