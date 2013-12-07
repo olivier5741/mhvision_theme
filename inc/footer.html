@@ -13,10 +13,10 @@
 		</section>
 
 		<section class="brand">
-			<ol class="brands">				
+			<ul>				
 				<koken:load source="contents">
 		          <koken:loop>
-		            <koken:has_category title="Marque">
+		            <koken:has_category title="Brand">
 		          	<li class="{{ content.title }}"> 
 		          		<koken:link to="category" url="/categories/{{ content.title }}">
 							<koken:img height="70" />
@@ -25,7 +25,7 @@
 					</koken:has_category>
 		          </koken:loop>
 		        </koken:load>
-		    </ol>
+		    </ul>
 		</section>
 
 	</footer>
