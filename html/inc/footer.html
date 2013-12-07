@@ -1,0 +1,39 @@
+	<footer class="main">
+
+		<!-- Outputs the footer navigation group as defined in info.json -->
+
+		<div class="navigation">
+			<nav class="menu">
+				<koken:navigation group="footer" />
+			</nav>
+		</div>
+
+		<div>
+			<p class="site-description">
+				{{ site.description }}
+			</p>
+		</div>
+
+		<div>
+			<ol class="brands">				
+				<koken:load source="contents">
+		          <koken:loop>
+		            <koken:has_category title="Marque">
+		          	<li class="{{ content.title }}"> 
+		          		<koken:link to="category" url="/categories/{{ content.title }}">
+							<koken:img height="70" />
+						</koken:link>
+					</li>
+					</koken:has_category>
+		          </koken:loop>
+		        </koken:load>
+		    </ol>
+		</div>
+
+	</footer>
+
+	</div> <!-- close #container -->
+
+</body>
+
+</html>
