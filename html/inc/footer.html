@@ -1,20 +1,18 @@
-	<footer class="main">
+	<footer>
 
-		<!-- Outputs the footer navigation group as defined in info.json -->
+		<!--
+		<nav>
+			<koken:navigation group="footer" />
+		</nav>
+		-->
 
-		<div class="navigation">
-			<nav class="menu">
-				<koken:navigation group="footer" />
-			</nav>
-		</div>
-
-		<div>
-			<p class="site-description">
+		<section class="description">
+			<p>
 				{{ site.description }}
 			</p>
-		</div>
+		</section>
 
-		<div>
+		<section class="brand">
 			<ol class="brands">				
 				<koken:load source="contents">
 		          <koken:loop>
@@ -28,12 +26,10 @@
 		          </koken:loop>
 		        </koken:load>
 		    </ol>
-		</div>
+		</section>
 
 	</footer>
-
-	</div> <!-- close #container -->
-
+	
 </body>
 
 </html>
