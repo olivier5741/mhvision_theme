@@ -28,13 +28,14 @@
     				{{ content.title }}	
     			</li>	
           <li>
-            
-                <koken:has_category title="Homme">
-                <koken:link>
+            <koken:categories>
+              Categories:
+              <koken:loop separator=", ">
+                <koken:if data="category.type" equals="Homme">
                   {{ category.title }}
-                </koken:link>
-                <koken:else>
-                </koken:has_category>
+                </koken:if>
+              </koken:loop>
+            </koken:categories>
           </li>
     			<li>	 
     				<koken:has_category title="Homme">				
