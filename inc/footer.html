@@ -14,15 +14,13 @@
 
 		<section class="brand">
 			<ul>				
-				<koken:load source="contents">
+				<koken:load source="album" filter:id="36">
 		          <koken:loop>
-		            <koken:has_category title="Brand">
 		          	<li class="{{ content.title }}"> 
 		          		<koken:link to="category" url="/categories/{{ content.title }}">
 							<koken:img height="70" />
 						</koken:link>
 					</li>
-					</koken:has_category>
 		          </koken:loop>
 		        </koken:load>
 		    </ul>
