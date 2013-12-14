@@ -1,0 +1,132 @@
+@import url('http://fonts.googleapis.com/css?family=Russo+One');
+
+@mhGreen: #AFCE53;
+@mhDarkGreen:#879F3B;
+@mhBlue:#004C5B;
+
+.coolContentText(){
+    font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;    
+    font-size: 15px;
+}
+
+.coolHeaderText(){
+    font-family: 'Russo One', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.rounded_corners(@radius: 5px)
+{
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.mhSmallDottedSeparation(){
+    border-bottom: 1px dotted white;
+}
+
+.noListStyle {
+    list-style: none;
+    list-style-image: none;
+}
+
+body {
+    header {
+        div.logo{
+            width:180px;
+        }
+
+        nav {
+            background-color:@mhGreen;
+            .rounded_corners(30px);           
+
+            .coolContentText();
+            text-transform:uppercase;
+            
+
+            ul {
+                .noListStyle();
+                li {   
+                    .mhSmallDottedSeparation();             
+                    ul {
+                        text-transform:lowercase;
+
+                    }
+                }
+            }
+        }
+    }
+
+    div{
+        .coolContentText();
+        header {
+
+        }
+
+        article{
+            footer{
+
+            }
+
+            header{
+
+            }
+        }
+
+        footer{
+
+        }
+
+    }
+
+    footer {
+        nav{
+            background-color:@mhGreen;
+            border: 5px solid @mhDarkGreen;
+            .rounded_corners(20px);
+
+            .coolContentText();  
+            ul{
+                li{
+                    border-right: 3px solid white;
+
+                    &:last-child{
+                        border-right:none;
+                    }
+
+                    a{
+                        &:hover{
+                            color:white;
+                        }
+                    }
+                }
+            }          
+        }
+
+        div.site-description{
+            text-align:center;
+            font-weight:bold;
+        }
+
+        div.brands{
+            ul{
+                li{
+                    float:left;
+                    margin:5px;
+                    border: 10px solid white;
+
+                    &:hover{
+                        border-color:red;
+                    }
+                }
+            }
+        }
+    }
+}

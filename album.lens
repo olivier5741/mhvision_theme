@@ -6,10 +6,11 @@
         <koken:load limit="9">
 
                 <h1>
-                        {{ album.title }}  
-                        <span class="set">
-                                <koken:parent> ({{ album.title }}) </koken:parent>
-                        </span>
+                        {{ album.title }}
+                </h1>
+
+                <h1 class="album">
+                    <koken:parent> ({{ album.title }}) </koken:parent>
                 </h1>
 
                 <!-- Add Facebook Open Graph and Twitter Cards metadata for nicer sharing -->        

@@ -1,0 +1,408 @@
+@import url('http://fonts.googleapis.com/css?family=Russo+One');
+
+
+@mhGreen: #AFCE53;
+@mhDarkGreen:#879F3B;
+@mhBlue:#004C5B;
+@mhGrey:#DFDFDF;
+@mhLightGreen:#E0EFB3;
+
+@baseFontSize: 15px;
+
+//FONTS
+.mhFontRusso(@size:30px, @color:@mhBlue, @weight:bold){
+    font-family: 'Russo One', sans-serif;
+    font-style: normal;
+    font-size: @size;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+    color: @color;
+    font-weight: @weight;
+}
+
+.mhTrebuchetMS(@size:30px, @color:black, @weight:none){
+    font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
+    font-size: @size;
+    color: @color;
+    font-weight: @weight;
+}
+
+.mhBorderRadius(@radius:10px){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.leftBorderRadius(@radius:10px){
+    -webkit-border-top-left-radius: @radius;
+    -moz-border-top-left-radius: @radius;
+    border-top-left-radius: @radius;
+
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-bottom-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+
+// GLOBAL
+ul{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+body{
+    background-color:@mhGrey;
+}
+
+// MAIN HEADER
+body {
+    >header {
+        >div.logo {
+            width: 200px;
+        }
+    }
+
+    >nav {
+        .mhTrebuchetMS(@baseFontSize,white);
+        text-transform: uppercase;
+        text-align: center;
+        background-color: @mhGreen;
+        width: 200px;
+        .mhBorderRadius(50px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        >ul {
+
+            width:80%;
+            margin: 0px auto;
+
+            >li {
+
+                display: block;
+                margin-bottom: 5px;
+                padding-bottom: 2px;
+                border-bottom: 1px dotted white;
+
+                &:last-child{
+                    //border-bottom:none;
+                }
+
+                >a {
+                    color:black;
+                    text-decoration:none;
+
+                    &:hover{
+                        color:white;
+                        font-weight:bold;
+                    }
+                }                               
+
+                >ul {
+
+                    width:70%;
+                    margin-left:auto;
+
+                    >li {                        
+                        >a {
+                            text-transform: none;
+                            text-align: right;
+                            font-size: 14px;                        
+                            .leftBorderRadius();
+                            margin:5px;
+                            color:black;
+                            text-decoration:none;
+                            background-color: @mhLightGreen;
+                            display:block;
+                            padding: 2px 5px 2px 0px; 
+
+                            &:hover{
+                                background-color: @mhDarkGreen;
+                            }
+                        }       
+                                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+//MAIN BRAND
+.mainBrand() {
+    >section.brand {
+        >ul {
+            >li {
+                float:left;
+                border: 10px solid white;
+                margin:5px;
+
+                &:hover {
+                    border : 10px solid red;
+                }
+
+                >a{
+                    img{
+                        margin-bottom: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//MAIN FOOTER
+body {
+    >footer {
+        >nav {
+            .mhTrebuchetMS(20px,black,bold);
+            text-transform: uppercase;
+            text-align: center;
+            border: 5px solid @mhDarkGreen;
+            background-color: @mhGreen;
+            .mhBorderRadius(20px);
+            margin-left: auto;
+            margin-right: auto;
+
+            >ul {
+                >li {
+                    margin-bottom: 5px;
+                    border-right: 3px solid white;
+                    padding-right: 0.6em;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    >a {
+
+                        display:block;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }                    
+                }
+            }
+        }
+
+        section.description {
+            p {
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+
+        .mainBrand();
+    }
+}
+
+//MAIN PAGINATION
+.mainPagination() {
+    >nav {
+        >ul {
+            >li {
+
+                display:inline;
+
+                >a {
+
+                    .mhFontRusso();
+
+                    &.previous &.next{
+                        text-transform:uppercase;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                        //text-decoration-color: @mhBlue;
+                        //text-decoration-size: 5px;
+                    }
+
+                    &.k-pagination-current {
+                        border: 2px solid @mhBlue;
+                        padding: 0px 10px;
+                    }
+                }
+            }
+
+                >li.previous {
+                }
+
+                >li.next {
+                }
+
+                >li.number {
+                }
+        }
+    }
+}
+
+//ARTICLE (Lunette)
+.eyeGlassesArticle {
+    >article {
+
+        .mhBorderRadius();
+        background-color:white;
+        padding:10px;
+        margin:10px;
+
+        >h1 {
+            display: inline;
+            float:left;
+            .mhFontRusso(20px,black);
+            margin:0px;
+        }
+
+        >header {
+
+            display: none;
+            float:right;
+            margin:0px 0px 0px 10px;
+
+            &.Homme, &.Femme, &.Junior, &.Enfant {
+
+                display: inline; 
+
+                a {
+
+                    .mhTrebuchetMS(20px,@mhBlue);
+
+                    &:hover{
+                        text-decoration:underline;
+                    }
+                }
+            }
+        }
+
+        
+
+        >section {
+        }
+
+        >footer {
+            display:none;
+        }
+    }
+}
+
+//MAIN ALBUM
+section.album{
+
+    padding-top: 20px;
+
+    >h1{
+        .mhFontRusso(40px,@mhBlue,bold);
+        float:left;
+        margin:0px;
+        padding:0px;
+        margin-top:-20px;
+
+        &.album{
+            font-size:20px;
+            text-transform:uppercase;
+            margin-right:20px;
+            margin-top:0px;
+            margin-left:10px;
+        }
+    }
+
+    
+
+    >header.album-description{
+        display:none;
+    }
+
+    >header.album-navigation{ 
+               
+        float:right;
+
+        >span.previous{
+            margin-right:10px;
+        }
+
+        >span.previous, >span.next{
+            a{
+                .mhTrebuchetMS(20px,black);
+                text-transform:uppercase;
+
+                &:hover{
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+
+    >header.social-network{
+        clear:both;
+        .mhTrebuchetMS();
+    }
+
+    >hr{
+        display:block;
+        height:2px;
+        background-color:@mhBlue;
+    }
+
+    >header.pagination{
+        .mainPagination
+    }
+        
+    .eyeGlassesArticle();
+
+    >footer{
+        .mainPagination
+    }
+}
+
+//ARTICLE (Essay)
+.documentationArticle{
+    article{
+
+    }
+}
+
+//MAIN ESSAY
+section.essay{
+    header{
+
+    }
+
+    .documentationArticle
+}
+
+//MAIN PAGE
+section.page {
+    h1 {
+
+    }
+
+    article{
+        h1{
+
+        }
+        section{
+            
+        }
+    }
+}
+
+//MAIN ERROR
+section.error{
+
+}
+
+//FLASH OBJECT
+.flash{
+    object{
+    }
+}
+
