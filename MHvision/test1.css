@@ -115,9 +115,9 @@ body > footer > section.brand > ul > li > a img {
   margin-bottom: -5px;
 }
 .eyeGlassesArticle > article {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   background-color: white;
   padding: 10px;
   margin: 10px;
@@ -216,14 +216,27 @@ section.album > header.album-navigation > span.next a:hover {
 section.album > header.social-network {
   clear: both;
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: #000000;
   font-weight: none;
+  margin-left: 15px;
+}
+section.album > header.social-network > a {
+  font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
+  font-size: 20px;
+  color: #000000;
+  font-weight: none;
+}
+section.album > header.social-network > a:hover {
+  text-decoration: underline;
 }
 section.album > hr {
   display: block;
   height: 2px;
   background-color: #004c5b;
+}
+section.album > header.pagination {
+  text-align: center;
 }
 section.album > header.pagination > nav > ul > li {
   display: inline;
@@ -251,9 +264,9 @@ section.album > header.pagination > nav > ul > li > a.k-pagination-current {
   padding: 0px 10px;
 }
 section.album > article {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   background-color: white;
   padding: 10px;
   margin: 10px;
@@ -301,6 +314,9 @@ section.album > article > header.Enfant a:hover {
 }
 section.album > article > footer {
   display: none;
+}
+section.album > footer {
+  text-align: center;
 }
 section.album > footer > nav > ul > li {
   display: inline;

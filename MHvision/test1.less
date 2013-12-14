@@ -208,6 +208,7 @@ body {
 //MAIN PAGINATION
 .mainPagination() {
     >nav {
+
         >ul {
             >li {
 
@@ -250,7 +251,7 @@ body {
 .eyeGlassesArticle {
     >article {
 
-        .mhBorderRadius();
+        .mhBorderRadius(15px);
         background-color:white;
         padding:10px;
         margin:10px;
@@ -343,7 +344,17 @@ section.album{
 
     >header.social-network{
         clear:both;
-        .mhTrebuchetMS();
+        .mhTrebuchetMS(20px,black,none);
+        margin-left:15px;
+
+        >a{
+            .mhTrebuchetMS(20px,black,none);
+
+            &:hover{
+                text-decoration:underline;
+            }
+        }
+
     }
 
     >hr{
@@ -353,13 +364,15 @@ section.album{
     }
 
     >header.pagination{
-        .mainPagination
+        text-align:center;
+        .mainPagination();
     }
         
     .eyeGlassesArticle();
 
     >footer{
-        .mainPagination
+        text-align:center;
+        .mainPagination();
     }
 }
 

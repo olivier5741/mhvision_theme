@@ -121,6 +121,8 @@
                         <koken:include file="inc/pagination.html" />
                 </footer>
 
+                <hr />
+
                 <!-- Fallback content if no data was loaded by koken:load -->
                 <koken:else>
                         <!-- Display fallback message in Site editor only -->
