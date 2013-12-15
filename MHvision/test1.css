@@ -115,6 +115,8 @@ body > footer > section.brand > ul > li > a img {
   margin-bottom: -5px;
 }
 .eyeGlassesArticle > article {
+  min-width: 450px;
+  max-width: 750px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -265,6 +267,8 @@ section.album > header.pagination > nav > ul > li > a.k-pagination-current {
   padding: 0px 10px;
 }
 section.album > article {
+  min-width: 450px;
+  max-width: 750px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -470,4 +474,75 @@ section.page > hr {
   height: 2px;
   background-color: #004c5b;
   width: 100%;
+}
+section.page > article {
+  width: 80%;
+}
+section.page > article > section {
+  float: left;
+  margin-top: 30px;
+}
+section.page > article > section.contact {
+  margin-left: 50px;
+  height: 370px;
+  font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
+  font-size: 15px;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #afce53;
+  border-bottom: #004c5b solid 10px;
+  border-left: #004c5b solid 10px;
+  border-radius: 10px;
+  border-bottom-left-radius: 40px;
+}
+section.page > article > section.contact em {
+  color: #002128;
+  font-weight: bolder;
+  font-size: 17px;
+}
+section.page > article > section.contact > div.information {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+section.page > article > section.contact > div.information > div.adresse {
+  margin-bottom: 10px;
+}
+section.page > article > section.contact > div.information > div.adresse > span {
+  display: block;
+}
+section.page > article > section.contact > div.information > div.phone {
+  margin: 0px;
+}
+section.page > article > section.contact > div.information > div.phone span {
+  display: block;
+}
+section.page > article > section.contact > div.information > div.mail {
+  margin-bottom: 10px;
+}
+section.page > article > section.contact > hr {
+  height: 3px;
+  background-color: white;
+  width: 80%;
+  border: none;
+}
+section.page > article > section.contact > div.opening {
+  margin-top: 40px;
+}
+section.page > article > section.contact > div.opening span {
+  display: block;
+}
+section.page > article > section.contact > div.opening span:not(:first-of-type) {
+  text-align: left;
+  text-indent: 60px;
+}
+section.page > article > section.map object {
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  background-color: #004c5b;
+  margin-left: 20px;
+  padding: 10px;
 }

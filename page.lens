@@ -12,9 +12,8 @@
 
 		<hr />
 
-		<section>
-			{{ page.content }}
-		</section>
+		{{ page.content }}
+		
 	</article>
 
 	</koken:load>

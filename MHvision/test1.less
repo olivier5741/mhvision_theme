@@ -261,6 +261,8 @@ body {
 .eyeGlassesArticle {
     >article {
 
+        min-width:450px;
+        max-width:750px;
         .mhBorderRadius(15px);
         background-color:white;
         padding:10px;
@@ -470,6 +472,102 @@ section.page {
 
     .MyHr();
 
+}
+
+//CONTACT PAGE
+section.page {
+    >article{       
+
+        width:80%;
+
+        >section{
+            float:left;
+            margin-top: 30px;
+        }
+
+        >section.contact{        
+            margin-left:50px;     
+            height:370px;         
+            .mhTrebuchetMS(15px,black,bold);
+            text-transform:uppercase;
+            max-width:400px;
+            padding:20px;
+            background-color:@mhGreen;
+            border-bottom:@mhBlue solid 10px;
+            border-left:@mhBlue solid 10px;
+
+            border-radius:10px;
+
+            border-bottom-left-radius:40px;
+
+            em{
+                color:darken(@mhBlue,10%);
+                font-weight:bolder;
+                font-size:17px;
+            }
+
+            >div.information{
+
+                margin-top:40px;
+                margin-bottom:40px;
+
+                >div.adresse{
+                    margin-bottom:10px;
+                    >span{
+                        display:block;
+                    }
+                }
+
+                >div.phone{
+                    margin:0px;
+                    span{
+                        display:block
+                    }
+                }
+
+                >div.mail{
+                    margin-bottom:10px;
+                    span{
+
+                    }
+                }
+
+                               
+            }
+
+            >hr{
+                height:3px;
+                background-color:white;
+                width:80%;
+                border:none;
+                } 
+            
+            >div.opening{
+
+                margin-top:40px;
+
+                span{
+                    display:block;
+
+                    &:not(:first-of-type){
+                        text-align:left;
+                        text-indent:60px;
+                    }
+                }
+            }            
+        }
+
+        >section.map{
+            object{
+                border-radius:10px;
+                width:400px;
+                height:400px;
+                background-color:@mhBlue;
+                margin-left:20px;
+                padding:10px;
+            }
+        }
+    }
 }
 
 //MAIN ERROR
