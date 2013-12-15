@@ -89,6 +89,8 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
 
+        position:absolute;
+
         >ul {
 
             width:80%;
@@ -142,6 +144,12 @@ body {
                 }
             }
         }
+    }
+
+    >section{
+
+        margin-left:250px;
+        
     }
 }
 
@@ -261,18 +269,19 @@ body {
 .eyeGlassesArticle {
     >article {
 
-        min-width:450px;
-        max-width:750px;
+            
+        float:left;
         .mhBorderRadius(15px);
         background-color:white;
         padding:10px;
         margin:10px;
 
         >h1 {
-            display: inline;
-            float:left;
+            //display: inline;
+            //float:left;
             .mhFontRusso(20px,black);
-            margin:0px;
+            //margin:0px;
+            position:absolute;
         }
 
         >header {
@@ -283,7 +292,9 @@ body {
 
             &.Homme, &.Femme, &.Junior, &.Enfant {
 
-                display: inline; 
+                //display: inline; 
+                position:absolute;
+                right:10px;
 
                 a {
 
@@ -299,6 +310,13 @@ body {
         
 
         >section {
+            //clear:both;
+            //display:block;
+            height:200px; 
+            text-align:center;
+            >img{
+                
+            }
         }
 
         >footer {

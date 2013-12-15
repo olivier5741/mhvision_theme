@@ -98,7 +98,7 @@
                     </koken:categories>
                             
                             <section>                                   
-                        <koken:img size="9:4" />
+                        <koken:img respond_to="height" />
                                 </section>
                                                         
                                                                         
