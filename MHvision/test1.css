@@ -132,7 +132,7 @@ body > footer > section.brand > ul > li > a img {
   text-decoration: none;
   letter-spacing: 0em;
   word-spacing: 0em;
-  line-height: 1.4;
+  line-height: 1;
   color: #000000;
   font-weight: bold;
   margin: 0px;
@@ -177,7 +177,7 @@ section.album > h1 {
   text-decoration: none;
   letter-spacing: 0em;
   word-spacing: 0em;
-  line-height: 1.4;
+  line-height: 1;
   color: #004c5b;
   font-weight: bold;
   float: left;
@@ -234,6 +234,7 @@ section.album > hr {
   display: block;
   height: 2px;
   background-color: #004c5b;
+  width: 100%;
 }
 section.album > header.pagination {
   text-align: center;
@@ -249,7 +250,7 @@ section.album > header.pagination > nav > ul > li > a {
   text-decoration: none;
   letter-spacing: 0em;
   word-spacing: 0em;
-  line-height: 1.4;
+  line-height: 1;
   color: #004c5b;
   font-weight: bold;
 }
@@ -281,7 +282,7 @@ section.album > article > h1 {
   text-decoration: none;
   letter-spacing: 0em;
   word-spacing: 0em;
-  line-height: 1.4;
+  line-height: 1;
   color: #000000;
   font-weight: bold;
   margin: 0px;
@@ -329,7 +330,7 @@ section.album > footer > nav > ul > li > a {
   text-decoration: none;
   letter-spacing: 0em;
   word-spacing: 0em;
-  line-height: 1.4;
+  line-height: 1;
   color: #004c5b;
   font-weight: bold;
 }
@@ -342,4 +343,131 @@ section.album > footer > nav > ul > li > a:hover {
 section.album > footer > nav > ul > li > a.k-pagination-current {
   border: 2px solid #004c5b;
   padding: 0px 10px;
+}
+section.essays > article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 600px;
+}
+section.essays > article > h1:first-of-type {
+  font-family: 'Russo One', sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1;
+  color: #004c5b;
+  font-weight: bold;
+  margin: 0px 0px -10px 5%;
+}
+section.essays > article > hr {
+  display: block;
+  height: 2px;
+  background-color: #004c5b;
+  width: 100%;
+}
+section.essays > article > h1:not(:first-of-type) {
+  font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
+  font-size: 20px;
+  color: dark;
+  font-weight: none;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+section.essays > article > h2 {
+  font-family: 'Russo One', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1;
+  color: #004c5b;
+  font-weight: bold;
+  margin: 0px 0px 0px 10%;
+}
+section.essays > article > p {
+  font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
+  font-size: 12px;
+  color: #000000;
+  font-weight: none;
+  margin: 10px 0px 10px 5%;
+}
+section.essays > article > div {
+  text-align: center;
+}
+section.essays > article ul {
+  list-style: circle;
+  margin-left: 20%;
+}
+section.essays > article ul > li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+section.essays > footer.pagination {
+  text-align: center;
+}
+section.essays > footer.pagination > nav > ul > li {
+  display: inline;
+}
+section.essays > footer.pagination > nav > ul > li > a {
+  font-family: 'Russo One', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1;
+  color: #004c5b;
+  font-weight: bold;
+}
+section.essays > footer.pagination > nav > ul > li > a.previous section.essays > footer.pagination > nav > ul > li > a.next {
+  text-transform: uppercase;
+}
+section.essays > footer.pagination > nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+section.essays > footer.pagination > nav > ul > li > a.k-pagination-current {
+  border: 2px solid #004c5b;
+  padding: 0px 10px;
+}
+section.page article {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.page article h1 {
+  font-family: 'Russo One', sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1;
+  color: #004c5b;
+  font-weight: bold;
+  margin: 0px 0px -10px 5%;
+  padding: 0px;
+}
+section.page article > hr {
+  display: block;
+  height: 2px;
+  background-color: #004c5b;
+  width: 100%;
+}
+section.page article section {
+  text-align: center;
+}
+section.page > hr {
+  display: block;
+  height: 2px;
+  background-color: #004c5b;
+  width: 100%;
 }

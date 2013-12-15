@@ -18,7 +18,7 @@
     text-decoration: none;
     letter-spacing: 0em;
     word-spacing: 0em;
-    line-height: 1.4;
+    line-height: 1;
     color: @color;
     font-weight: @weight;
 }
@@ -44,6 +44,16 @@
     -webkit-border-bottom-left-radius: @radius;
     -moz-border-bottom-left-radius: @radius;
     border-bottom-left-radius: @radius;
+}
+
+.MyHr(@width:100%){
+    >hr{
+        display:block;
+        height:2px;
+        background-color:@mhBlue;
+        width:@width;
+
+    }
 }
 
 // GLOBAL
@@ -357,11 +367,7 @@ section.album{
 
     }
 
-    >hr{
-        display:block;
-        height:2px;
-        background-color:@mhBlue;
-    }
+    .MyHr();
 
     >header.pagination{
         text-align:center;
@@ -377,35 +383,93 @@ section.album{
 }
 
 //ARTICLE (Essay)
-.documentationArticle{
-    article{
+.documentationArticle(){
 
+    >article{
+
+        margin-left:auto;
+        margin-right:auto;
+        width:80%;
+        max-width:600px;
+
+        >h1:first-of-type{
+            .mhFontRusso(40px,@mhBlue,bold);
+            margin:0px 0px -10px 5%;
+        }
+
+        .MyHr();
+
+        >h1:not(:first-of-type){
+            .mhTrebuchetMS(20px,dark);
+            text-transform:uppercase;
+            text-align:center;
+            margin:20px 0px 0px 0px;
+        }
+
+        >h2{
+            .mhFontRusso(15px,@mhBlue);
+            margin:0px 0px 0px 10%;
+        }
+
+        >p{
+            .mhTrebuchetMS(12px,black);
+            margin:10px 0px 10px 5%;
+        }
+
+        >div{
+            text-align:center;
+        }
+
+        ul{
+            list-style:circle;
+            margin-left:20%;           
+
+            >li{
+                text-align:left;
+                margin-bottom:5px;
+            }
+        }
     }
 }
 
 //MAIN ESSAY
-section.essay{
-    header{
+section.essays{
+    .documentationArticle();
 
+    >footer.pagination{
+        text-align:center;
+        .mainPagination();
     }
-
-    .documentationArticle
 }
 
 //MAIN PAGE
 section.page {
-    h1 {
 
+    h1 {
+        
     }
 
     article{
-        h1{
 
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+
+        h1{
+            .mhFontRusso(40px,@mhBlue,bold);
+            margin:0px 0px -10px 5%;
+            padding:0px;
         }
+
+        .MyHr();
+
         section{
-            
-        }
+            text-align:center;            
+        }        
     }
+
+    .MyHr();
+
 }
 
 //MAIN ERROR

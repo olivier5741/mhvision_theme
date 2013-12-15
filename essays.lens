@@ -1,0 +1,47 @@
+<koken:include file="inc/header.html" />
+
+<section class="essays">
+
+     <!-- Load this template's source data (essays) and limit for pagination -->
+     <koken:load limit="5">
+
+        <h1>
+
+        </h1>
+
+        <!-- Loop over and display each essay -->
+        <koken:loop>
+
+            <article>
+
+                <h1>
+                    {{ essay.title }}
+                </h1>
+
+                <hr />
+
+                {{ essay.content }}                       
+
+            </article>
+
+       </koken:loop>
+
+        <!-- Display pagination links -->
+        <footer class="pagination">
+            <koken:include file="inc/pagination.html" />
+        </footer>
+          
+
+          <!-- Fallback content if no data was loaded by koken:load -->
+      <koken:else>
+
+          <!-- Display fallback message in Site editor only -->
+          <koken:note>
+            No essays found. Create some in Text.
+          </koken:note>
+
+     </koken:load>
+
+</section> <!-- close #content -->
+
+<koken:include file="inc/footer.html" />
