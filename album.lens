@@ -97,9 +97,9 @@
                       </koken:loop>
                     </koken:categories>
                             
-                            <section>                                   
-                        <koken:img respond_to="height" />
-                                </section>
+                            <section data-koken-ignore-responsive="true" >                              
+                                    <koken:img />
+                            </section>
                                                         
                                                                         
                                 <koken:categories>
