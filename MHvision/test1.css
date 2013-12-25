@@ -1,4 +1,4 @@
-﻿@import url('http://fonts.googleapis.com/css?family=Russo+One');
+@import url('http://fonts.googleapis.com/css?family=Russo+One');
 ul {
   margin: 0px;
   padding: 0px;
@@ -118,66 +118,6 @@ body > footer > section.brand > ul > li:hover {
 body > footer > section.brand > ul > li > a img {
   margin-bottom: -5px;
 }
-.eyeGlassesArticle > article {
-  float: left;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  background-color: white;
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
-  height: 200px;
-}
-.eyeGlassesArticle > article > h1 {
-  font-family: 'Russo One', sans-serif;
-  font-style: normal;
-  font-size: 20px;
-  text-transform: none;
-  text-decoration: none;
-  letter-spacing: 0em;
-  word-spacing: 0em;
-  line-height: 1;
-  color: #000000;
-  font-weight: bold;
-  position: absolute;
-}
-.eyeGlassesArticle > article > header {
-  display: none;
-  float: right;
-  margin: 0px 0px 0px 10px;
-}
-.eyeGlassesArticle > article > header.Homme,
-.eyeGlassesArticle > article > header.Femme,
-.eyeGlassesArticle > article > header.Junior,
-.eyeGlassesArticle > article > header.Enfant {
-  position: absolute;
-  right: 10px;
-}
-.eyeGlassesArticle > article > header.Homme a,
-.eyeGlassesArticle > article > header.Femme a,
-.eyeGlassesArticle > article > header.Junior a,
-.eyeGlassesArticle > article > header.Enfant a {
-  font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
-  font-size: 20px;
-  color: #004c5b;
-  font-weight: none;
-}
-.eyeGlassesArticle > article > header.Homme a:hover,
-.eyeGlassesArticle > article > header.Femme a:hover,
-.eyeGlassesArticle > article > header.Junior a:hover,
-.eyeGlassesArticle > article > header.Enfant a:hover {
-  text-decoration: underline;
-}
-.eyeGlassesArticle > article > section {
-  text-align: center;
-}
-.eyeGlassesArticle > article > section > img {
-  max-height: 200px;
-}
-.eyeGlassesArticle > article > footer {
-  display: none;
-}
 section.album {
   padding-top: 20px;
 }
@@ -278,6 +218,7 @@ section.album > header.pagination > nav > ul > li > a.k-pagination-current {
 }
 section.album > article {
   float: left;
+  position: relative;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -285,7 +226,7 @@ section.album > article {
   padding: 10px;
   margin: 10px;
   width: 300px;
-  height: 200px;
+  height: 220px;
 }
 section.album > article > h1 {
   font-family: 'Russo One', sans-serif;
@@ -298,6 +239,16 @@ section.album > article > h1 {
   line-height: 1;
   color: #000000;
   font-weight: bold;
+  /* Fallback for web browsers that doesn't support RGBa */
+
+  background: #ffffff transparent;
+  /* RGBa with 0.6 opacity */
+
+  background: rgba(255, 255, 255, 0.6);
+  /* For IE 5.5 - 7*/
+
+  /* For IE 8*/
+
   position: absolute;
 }
 section.album > article > header {
@@ -328,10 +279,13 @@ section.album > article > header.Enfant a:hover {
   text-decoration: underline;
 }
 section.album > article > section {
-  text-align: center;
-}
-section.album > article > section > img {
-  max-height: 200px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 section.album > article > footer {
   display: none;
@@ -365,10 +319,21 @@ section.album > footer > nav > ul > li > a.k-pagination-current {
   padding: 0px 10px;
 }
 section.essays > article {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  max-width: 600px;
+  /*
+        @media @tablet{
+            margin-left:auto;
+            margin-right:auto;
+            width:80%;
+            max-width:600px;
+        }
+            */
+
+}
+@media only screen and (min-width: 960px) {
+  section.essays > article {
+    width: 400px;
+    float: left;
+  }
 }
 section.essays > article > h1:first-of-type {
   font-family: 'Russo One', sans-serif;

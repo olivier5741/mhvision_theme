@@ -1,5 +1,7 @@
 @import url('http://fonts.googleapis.com/css?family=Russo+One');
 
+@tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
+@desktop: ~"only screen and (min-width: 960px)";
 
 @mhGreen: #AFCE53;
 @mhDarkGreen:#879F3B;
@@ -44,6 +46,27 @@
     -webkit-border-bottom-left-radius: @radius;
     -moz-border-bottom-left-radius: @radius;
     border-bottom-left-radius: @radius;
+}
+
+.alpha60() {
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(255, 255, 255) transparent;
+    /* RGBa with 0.6 opacity */
+    background: rgba(255, 255, 255, 0.6);
+    /* For IE 5.5 - 7*/
+    //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    //-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.is-Transformed() { 
+  
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 }
 
 .MyHr(@width:100%){
@@ -266,24 +289,27 @@ body {
 }
 
 //ARTICLE (Lunette)
-.eyeGlassesArticle {
+.eyeGlassesArticle() {
     >article {
 
             
         float:left;
+        position:relative;
         .mhBorderRadius(15px);
         background-color:white;
         padding:10px;
-        margin:10px;
+        margin:10px;  
+        
+         
 
         width:300px;
-        height:200px;
+        height:220px;
 
         >h1 {
             //display: inline;
             //float:left;
             .mhFontRusso(20px,black);
-            //margin:0px;
+            .alpha60();
             position:absolute;
         }
 
@@ -314,11 +340,13 @@ body {
 
         >section {
             //clear:both;
-            //display:block;            
-            text-align:center;
+            
+            .is-Transformed();
+            
 
             >img{   
-                max-height:200px;            
+                
+                         
             }
         }
 
@@ -410,10 +438,21 @@ section.album{
 
     >article{
 
-        margin-left:auto;
-        margin-right:auto;
-        width:80%;
-        max-width:600px;
+        /*
+        @media @tablet{
+            margin-left:auto;
+            margin-right:auto;
+            width:80%;
+            max-width:600px;
+        }
+            */
+
+        @media @desktop{
+            width:400px;
+            float:left;
+        }
+             
+        
 
         >h1:first-of-type{
             .mhFontRusso(40px,@mhBlue,bold);
