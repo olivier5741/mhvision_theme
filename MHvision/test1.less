@@ -59,6 +59,40 @@
     //-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
+.transparentyGradient(){
+    .gradient{
+        /* webkit example */
+        background-image: -webkit-gradient(
+          linear, left bottom, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
+
+        /* mozilla example - FF3.6+ */
+        background-image: -moz-linear-gradient(
+          right center,
+          rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+        );
+
+        /* IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=1, startColor=0, endColorStr=#FFFFFF
+        );
+
+        /* IE8 uses -ms-filter for whatever reason... */
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=1, startColor=0, endColoStr=#FFFFFF
+        );
+    }
+}
+
+.textBorder(@color:white) {
+text-shadow:
+    0px 0px 1px @color,
+    0px 0px 2px @color,
+    0px 0px 3px @color;
+}
+
+
 .is-Transformed() { 
   
   margin: auto;
@@ -228,7 +262,7 @@ body {
                         display:block;
 
                         &:hover {
-                            color: white;
+                            color: white;                            
                         }
                     }                    
                 }
@@ -291,67 +325,69 @@ body {
 //ARTICLE (Lunette)
 .eyeGlassesArticle() {
     >article {
-
-            
-        float:left;
-        position:relative;
+        float: left;
+        position: relative;
         .mhBorderRadius(15px);
-        background-color:white;
-        padding:10px;
-        margin:10px;  
-        
-         
-
-        width:300px;
-        height:220px;
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        height: 220px;
 
         >h1 {
             //display: inline;
             //float:left;
+            margin: 2px 0 0 5px;
             .mhFontRusso(20px,black);
             .alpha60();
-            position:absolute;
+            position: absolute;
         }
 
         >header {
+            position: absolute;
+            z-index: 10;
+            right: 0px;
+            width: 80px;
 
-            display: none;
-            float:right;
-            margin:0px 0px 0px 10px;
+            background-image: radial-gradient( white, rgba(255, 255, 255, 0.6));  
 
-            &.Homme, &.Femme, &.Junior, &.Enfant {
+            >ul {                
 
-                //display: inline; 
-                position:absolute;
-                right:10px;
+                > li {
+                    display: none;
 
-                a {
+                    &.Homme, &.Femme, &.Junior, &.Enfant {
+                        display: inline;
+                        float: right;
+                        margin: -2px 8px 0px 3px;
+                        padding: 0px;
 
-                    .mhTrebuchetMS(20px,@mhBlue);
+                        a {
+                            .mhTrebuchetMS(20px,@mhBlue);
 
-                    &:hover{
-                        text-decoration:underline;
+
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
                 }
             }
         }
 
-        
-
         >section {
             //clear:both;
-            
             .is-Transformed();
-            
+            position: absolute;
+            z-index: 1;
 
-            >img{   
-                
-                         
+            >img {
             }
         }
 
         >footer {
-            display:none;
+            display: none;
         }
     }
 }
@@ -428,6 +464,7 @@ section.album{
     .eyeGlassesArticle();
 
     >footer{
+        clear:both;
         text-align:center;
         .mainPagination();
     }
@@ -447,10 +484,12 @@ section.album{
         }
             */
 
+        /*
         @media @desktop{
             width:400px;
             float:left;
         }
+            */
              
         
 

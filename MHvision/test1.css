@@ -229,6 +229,7 @@ section.album > article {
   height: 220px;
 }
 section.album > article > h1 {
+  margin: 2px 0 0 5px;
   font-family: 'Russo One', sans-serif;
   font-style: normal;
   font-size: 20px;
@@ -252,45 +253,54 @@ section.album > article > h1 {
   position: absolute;
 }
 section.album > article > header {
-  display: none;
-  float: right;
-  margin: 0px 0px 0px 10px;
-}
-section.album > article > header.Homme,
-section.album > article > header.Femme,
-section.album > article > header.Junior,
-section.album > article > header.Enfant {
   position: absolute;
-  right: 10px;
+  z-index: 10;
+  right: 0px;
+  width: 80px;
+  background-image: radial-gradient(#ffffff, rgba(255, 255, 255, 0.6));
 }
-section.album > article > header.Homme a,
-section.album > article > header.Femme a,
-section.album > article > header.Junior a,
-section.album > article > header.Enfant a {
+section.album > article > header > ul > li {
+  display: none;
+}
+section.album > article > header > ul > li.Homme,
+section.album > article > header > ul > li.Femme,
+section.album > article > header > ul > li.Junior,
+section.album > article > header > ul > li.Enfant {
+  display: inline;
+  float: right;
+  margin: -2px 8px 0px 3px;
+  padding: 0px;
+}
+section.album > article > header > ul > li.Homme a,
+section.album > article > header > ul > li.Femme a,
+section.album > article > header > ul > li.Junior a,
+section.album > article > header > ul > li.Enfant a {
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
   font-size: 20px;
   color: #004c5b;
   font-weight: none;
 }
-section.album > article > header.Homme a:hover,
-section.album > article > header.Femme a:hover,
-section.album > article > header.Junior a:hover,
-section.album > article > header.Enfant a:hover {
+section.album > article > header > ul > li.Homme a:hover,
+section.album > article > header > ul > li.Femme a:hover,
+section.album > article > header > ul > li.Junior a:hover,
+section.album > article > header > ul > li.Enfant a:hover {
   text-decoration: underline;
 }
 section.album > article > section {
   margin: auto;
-  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
 }
 section.album > article > footer {
   display: none;
 }
 section.album > footer {
+  clear: both;
   text-align: center;
 }
 section.album > footer > nav > ul > li {
@@ -328,12 +338,13 @@ section.essays > article {
         }
             */
 
-}
-@media only screen and (min-width: 960px) {
-  section.essays > article {
-    width: 400px;
-    float: left;
-  }
+  /*
+        @media @desktop{
+            width:400px;
+            float:left;
+        }
+            */
+
 }
 section.essays > article > h1:first-of-type {
   font-family: 'Russo One', sans-serif;

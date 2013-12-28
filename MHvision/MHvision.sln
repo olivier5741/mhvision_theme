@@ -5,6 +5,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{80C9D267-170
 	ProjectSection(SolutionItems) = preProject
 		main.less = main.less
 		test1.less = test1.less
+		test2.less = test2.less
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "html", "html", "{17CAD39E-9E6A-4C94-BF5E-3EA59416D5F2}"

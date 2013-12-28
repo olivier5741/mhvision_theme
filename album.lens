@@ -90,11 +90,18 @@
                                 <h1> {{ content.title }}</h1>
                                 
                                 <koken:categories>
-                      <koken:loop>
-                              <header class="{{ category.title }}">                                        
-                          <koken:link to="category">{{ category.title }}</koken:link>
-                        </header>
-                      </koken:loop>
+
+                                <header>
+                                    <ul>
+                                        <koken:loop>                          
+                                        <li class="{{ category.title }}">  
+                                          <koken:link to="category">
+                                            {{ category.title }}
+                                          </koken:link>
+                                        </li>                       
+                                        </koken:loop>
+                                    </ul>  
+                                </header>
                     </koken:categories>
                             
                             <section data-koken-ignore-responsive="true" >                              
