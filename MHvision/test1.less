@@ -341,6 +341,7 @@ body {
             .mhFontRusso(20px,black);
             .alpha60();
             position: absolute;
+            z-index: 11;
         }
 
         >header {
@@ -348,18 +349,18 @@ body {
             z-index: 10;
             right: 0px;
             width: 80px;
+            margin: -2px 8px 0px 3px;
+            background-image: -webkit-radial-gradient(80% 10%, ellipse cover, white 40%, rgba(255, 255, 255, 0.05));
 
-            background-image: radial-gradient( white, rgba(255, 255, 255, 0.6));  
-
-            >ul {                
+            >ul {
 
                 > li {
                     display: none;
 
                     &.Homme, &.Femme, &.Junior, &.Enfant {
                         display: inline;
+                        line-height: 20px;
                         float: right;
-                        margin: -2px 8px 0px 3px;
                         padding: 0px;
 
                         a {
@@ -388,6 +389,25 @@ body {
 
         >footer {
             display: none;
+            z-index: 10;
+
+            &.Dutz, &.Adidas, &.Kinto, &.Jaguar {
+                position: absolute;
+                bottom: 5px;
+                right: 15px;
+                display: block;
+
+                a {
+                    img {
+                        width: 90px;
+                        height:40px;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

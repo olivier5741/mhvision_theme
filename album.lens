@@ -110,9 +110,19 @@
                                                         
                                                                         
                                 <koken:categories>
-                      <koken:loop>                                                                                          
-                              <footer class="{{ category.title }}">                                                
-                            <koken:link>{{ category.title }}</koken:link>
+                      <koken:loop> 
+
+                      <footer class="{{ category.title }}">    
+                            <koken:link>
+                                  <koken:load source="contents" filter:category="Brand" filter:tags="{{ category.title }}">
+                                    <koken:loop>   
+                                        <koken:img />
+                                    </koken:loop>
+                                  </koken:load>     
+                               <span>                                     
+                                        {{ category.title }}                               
+                               </span>
+                            </koken:link>
                         </footer>                                                
                       </koken:loop>
                     </koken:categories>                                

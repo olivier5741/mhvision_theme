@@ -251,13 +251,15 @@ section.album > article > h1 {
   /* For IE 8*/
 
   position: absolute;
+  z-index: 11;
 }
 section.album > article > header {
   position: absolute;
   z-index: 10;
   right: 0px;
   width: 80px;
-  background-image: radial-gradient(#ffffff, rgba(255, 255, 255, 0.6));
+  margin: -2px 8px 0px 3px;
+  background-image: -webkit-radial-gradient(80% 10%, ellipse cover, #ffffff 40%, rgba(255, 255, 255, 0.05));
 }
 section.album > article > header > ul > li {
   display: none;
@@ -267,8 +269,8 @@ section.album > article > header > ul > li.Femme,
 section.album > article > header > ul > li.Junior,
 section.album > article > header > ul > li.Enfant {
   display: inline;
+  line-height: 20px;
   float: right;
-  margin: -2px 8px 0px 3px;
   padding: 0px;
 }
 section.album > article > header > ul > li.Homme a,
@@ -297,6 +299,29 @@ section.album > article > section {
   z-index: 1;
 }
 section.album > article > footer {
+  display: none;
+  z-index: 10;
+}
+section.album > article > footer.Dutz,
+section.album > article > footer.Adidas,
+section.album > article > footer.Kinto,
+section.album > article > footer.Jaguar {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  display: block;
+}
+section.album > article > footer.Dutz a img,
+section.album > article > footer.Adidas a img,
+section.album > article > footer.Kinto a img,
+section.album > article > footer.Jaguar a img {
+  width: 90px;
+  height: 40px;
+}
+section.album > article > footer.Dutz a span,
+section.album > article > footer.Adidas a span,
+section.album > article > footer.Kinto a span,
+section.album > article > footer.Jaguar a span {
   display: none;
 }
 section.album > footer {
