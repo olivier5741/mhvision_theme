@@ -299,30 +299,35 @@ section.album > article > section {
   z-index: 1;
 }
 section.album > article > footer {
-  display: none;
   z-index: 10;
+  /*
+            &.Dutz, &.Adidas, &.Kinto, &.Jaguar {
+                position: absolute;
+                bottom: 5px;
+                right: 15px;
+                display: block;
+
+                a {
+                    img {
+                        width: 90px;
+                        height:40px;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            */
+
 }
-section.album > article > footer.Dutz,
-section.album > article > footer.Adidas,
-section.album > article > footer.Kinto,
-section.album > article > footer.Jaguar {
+section.album > article > footer img {
   position: absolute;
   bottom: 5px;
   right: 15px;
   display: block;
-}
-section.album > article > footer.Dutz a img,
-section.album > article > footer.Adidas a img,
-section.album > article > footer.Kinto a img,
-section.album > article > footer.Jaguar a img {
   width: 90px;
   height: 40px;
-}
-section.album > article > footer.Dutz a span,
-section.album > article > footer.Adidas a span,
-section.album > article > footer.Kinto a span,
-section.album > article > footer.Jaguar a span {
-  display: none;
 }
 section.album > footer {
   clear: both;

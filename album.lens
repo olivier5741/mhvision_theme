@@ -113,12 +113,14 @@
                       <koken:loop> 
 
                       <footer class="{{ category.title }}">    
-                            <koken:link>
-                                  <koken:load source="contents" filter:category="Brand" filter:tags="{{ category.title }}">
-                                    <koken:loop>   
-                                        <koken:img />
-                                    </koken:loop>
-                                  </koken:load>     
+                            <koken:link>                                
+                                  <koken:load source="contents" filter:category="{{ category.title }}">
+                                      <koken:loop>
+                                        <koken:if data="content.title" equals="BRAND">
+                                           <koken:img />
+                                        </koken:if>
+                                      </koken:loop>
+                                    </koken:load>    
                                <span>                                     
                                         {{ category.title }}                               
                                </span>
