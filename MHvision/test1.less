@@ -1,8 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=Russo+One');
 
-@smartphone: ~"only screen and (min-width: 300px) and (max-width:720px )";
-@tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
-@desktop: ~"only screen and (min-width: 960px)";
+@smallest: ~"only screen and (max-width: 300px)";
+@small: ~"only screen and (max-width: 440px)";
+@medium: ~"only screen and (min-width: 500px) and (max-width: 980px)";
+@biggest: ~"only screen and (min-width: 980px)";
 
 @mhGreen: #AFCE53;
 @mhDarkGreen:#879F3B;
@@ -123,8 +124,18 @@ a{
     text-decoration:none;
 }
 
-body{
-    background-color:@mhGrey;
+body {
+    background-color: @mhGrey;
+
+    >section {
+        @media @biggest {
+            margin-left:250px;
+        }
+
+        @media @smallest {
+            margin-right:0px;
+        }
+    }
 }
 
 // MAIN HEADER
@@ -145,7 +156,14 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
 
-        position:absolute;
+        @media @biggest{            
+            position:absolute;
+        }
+
+        @media @smallest, @small{            
+            position:relative;
+            margin:auto;
+        }
 
         >ul {
 
@@ -201,12 +219,6 @@ body {
             }
         }
     }
-
-    >section{
-
-        margin-left:250px;
-        
-    }
 }
 
 //MAIN BRAND
@@ -215,16 +227,17 @@ body {
         >ul {
             >li {
                 float:left;
-                border: 10px solid white;
+                border: 10px solid white; @media @smallest {border: 3px solid white;} @media @small {border: 5px solid white;}
                 margin:5px;
 
                 &:hover {
-                    border : 10px solid red;
+                    border : 10px solid red; @media @smallest {border: 3px solid red;} @media @smallest {border: 5px solid red;}
                 }
 
                 >a{
                     img{
                         margin-bottom: -5px;
+                        height:50px; @media @smallest { height:30px;} @media @smallest { height:40px;}
                     }
                 }
             }
@@ -324,14 +337,39 @@ body {
 //ARTICLE (Lunette)
 .eyeGlassesArticle() {
     >article {
-        float: left;
-        position: relative;
         .mhBorderRadius(15px);
         background-color: white;
-        padding: 10px;
-        margin: 10px;
-        width: 300px;
-        height: 220px;
+        
+        overflow:hidden;
+
+        @media @biggest {
+            float: left;
+            position: relative;
+            width: 300px;
+            height: 220px; 
+            padding: 10px;
+            margin: 10px;  
+        }
+        
+        @media @smallest {
+            width: 280px;
+            height: 200px; 
+            position:relative;
+            padding: 0px;
+            padding-top:10px;
+            margin-top: 10px;  
+        } 
+
+        @media @small {
+            width:auto; 
+            height:auto;   
+            max-width:480px;
+            max-height:260px;      
+            position:relative;
+            padding-top: 65%;
+            box-sizing: border-box;
+            margin-top: 10px;  
+        } 
 
         >h1 {
             //display: inline;
@@ -341,14 +379,17 @@ body {
             .mhBorderRadius(10px);
             padding-right: 10px;
             background-image: -webkit-radial-gradient(20% 50%, ellipse cover, white 40%, rgba(255, 255, 255, 0.05));
-            position: absolute;
+            position: absolute; 
+            top:10px; 
+            left:15px;          
             z-index: 11;
         }
 
         >header {
             position: absolute;
             z-index: 10;
-            right: 0px;
+            right:5px;
+            top:10px;
             width: 80px;
             margin: -2px 8px 0px 3px;
             .mhBorderRadius(10px);
@@ -380,12 +421,13 @@ body {
         }
 
         >section {
-            //clear:both;
+
             .is-Transformed();
             position: absolute;
             z-index: 1;
 
             >img {
+                max-width:500px;
             }
         }
 

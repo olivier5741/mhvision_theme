@@ -10,6 +10,16 @@ a {
 body {
   background-color: #dfdfdf;
 }
+@media only screen and (min-width: 980px) {
+  body > section {
+    margin-left: 250px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  body > section {
+    margin-right: 0px;
+  }
+}
 body > header > div.logo {
   width: 200px;
 }
@@ -27,7 +37,17 @@ body > nav {
   border-radius: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  position: absolute;
+}
+@media only screen and (min-width: 980px) {
+  body > nav {
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 300px), only screen and (max-width: 440px) {
+  body > nav {
+    position: relative;
+    margin: auto;
+  }
 }
 body > nav > ul {
   width: 80%;
@@ -71,9 +91,6 @@ body > nav > ul > li > ul > li > a {
 body > nav > ul > li > ul > li > a:hover {
   background-color: #879f3b;
 }
-body > section {
-  margin-left: 250px;
-}
 body > footer > nav {
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
   font-size: 20px;
@@ -112,11 +129,42 @@ body > footer > section.brand > ul > li {
   border: 10px solid white;
   margin: 5px;
 }
+@media only screen and (max-width: 300px) {
+  body > footer > section.brand > ul > li {
+    border: 3px solid white;
+  }
+}
+@media only screen and (max-width: 440px) {
+  body > footer > section.brand > ul > li {
+    border: 5px solid white;
+  }
+}
 body > footer > section.brand > ul > li:hover {
   border: 10px solid red;
 }
+@media only screen and (max-width: 300px) {
+  body > footer > section.brand > ul > li:hover {
+    border: 3px solid red;
+  }
+}
+@media only screen and (max-width: 300px) {
+  body > footer > section.brand > ul > li:hover {
+    border: 5px solid red;
+  }
+}
 body > footer > section.brand > ul > li > a img {
   margin-bottom: -5px;
+  height: 50px;
+}
+@media only screen and (max-width: 300px) {
+  body > footer > section.brand > ul > li > a img {
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  body > footer > section.brand > ul > li > a img {
+    height: 40px;
+  }
 }
 section.album {
   padding-top: 20px;
@@ -217,16 +265,43 @@ section.album > header.pagination > nav > ul > li > a.k-pagination-current {
   padding: 0px 10px;
 }
 section.album > article {
-  float: left;
-  position: relative;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
   background-color: white;
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
-  height: 220px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 980px) {
+  section.album > article {
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  section.album > article {
+    width: 280px;
+    height: 200px;
+    position: relative;
+    padding: 0px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  section.album > article {
+    width: auto;
+    height: auto;
+    max-width: 480px;
+    max-height: 260px;
+    position: relative;
+    padding-top: 65%;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
 }
 section.album > article > h1 {
   margin: 2px 0 0 5px;
@@ -246,12 +321,15 @@ section.album > article > h1 {
   padding-right: 10px;
   background-image: -webkit-radial-gradient(20% 50%, ellipse cover, #ffffff 40%, rgba(255, 255, 255, 0.05));
   position: absolute;
+  top: 10px;
+  left: 15px;
   z-index: 11;
 }
 section.album > article > header {
   position: absolute;
   z-index: 10;
-  right: 0px;
+  right: 5px;
+  top: 10px;
   width: 80px;
   margin: -2px 8px 0px 3px;
   -webkit-border-radius: 10px;
@@ -295,6 +373,9 @@ section.album > article > section {
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 1;
+}
+section.album > article > section > img {
+  max-width: 500px;
 }
 section.album > article > footer {
   z-index: 10;
