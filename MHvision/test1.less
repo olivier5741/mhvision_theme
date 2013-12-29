@@ -1,5 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Russo+One');
 
+@smartphone: ~"only screen and (min-width: 300px) and (max-width:720px )";
 @tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
 @desktop: ~"only screen and (min-width: 960px)";
 
@@ -87,9 +88,7 @@
 
 .textBorder(@color:white) {
 text-shadow:
-    0px 0px 1px @color,
-    0px 0px 2px @color,
-    0px 0px 3px @color;
+    0px 0px 10px @color,
 }
 
 
@@ -339,7 +338,9 @@ body {
             //float:left;
             margin: 2px 0 0 5px;
             .mhFontRusso(20px,black);
-            .alpha60();
+            .mhBorderRadius(10px);
+            padding-right: 10px;
+            background-image: -webkit-radial-gradient(20% 50%, ellipse cover, white 40%, rgba(255, 255, 255, 0.05));
             position: absolute;
             z-index: 11;
         }
@@ -350,6 +351,7 @@ body {
             right: 0px;
             width: 80px;
             margin: -2px 8px 0px 3px;
+            .mhBorderRadius(10px);
             background-image: -webkit-radial-gradient(80% 10%, ellipse cover, white 40%, rgba(255, 255, 255, 0.05));
 
             >ul {
@@ -388,9 +390,30 @@ body {
         }
 
         >footer {
-            
             z-index: 10;
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
 
+            li {
+                a{
+                    .mhFontRusso(25px,white,bold);
+                    .textBorder(black);
+
+                    &:hover{
+                        color:black;
+                        .textBorder();
+                    }
+                }
+
+                display: inline;
+                float: right;
+                margin-left:10px;
+
+                &.Homme, &.Femme, &.Enfant, &.Junior {
+                    display: none;
+                }
+            }
             /*
             &.Dutz, &.Adidas, &.Kinto, &.Jaguar {
                 position: absolute;
@@ -410,15 +433,16 @@ body {
                 }
             }
             */
-
+            /*
             img{
+                z-index: 10;
                 position: absolute;
                 bottom: 5px;
                 right: 15px;
                 display: block;
                 width: 90px;
-                height:40px;
             }
+                */
         }
     }
 }

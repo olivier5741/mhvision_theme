@@ -240,16 +240,11 @@ section.album > article > h1 {
   line-height: 1;
   color: #000000;
   font-weight: bold;
-  /* Fallback for web browsers that doesn't support RGBa */
-
-  background: #ffffff transparent;
-  /* RGBa with 0.6 opacity */
-
-  background: rgba(255, 255, 255, 0.6);
-  /* For IE 5.5 - 7*/
-
-  /* For IE 8*/
-
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding-right: 10px;
+  background-image: -webkit-radial-gradient(20% 50%, ellipse cover, #ffffff 40%, rgba(255, 255, 255, 0.05));
   position: absolute;
   z-index: 11;
 }
@@ -259,6 +254,9 @@ section.album > article > header {
   right: 0px;
   width: 80px;
   margin: -2px 8px 0px 3px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   background-image: -webkit-radial-gradient(80% 10%, ellipse cover, #ffffff 40%, rgba(255, 255, 255, 0.05));
 }
 section.album > article > header > ul > li {
@@ -300,6 +298,9 @@ section.album > article > section {
 }
 section.album > article > footer {
   z-index: 10;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
   /*
             &.Dutz, &.Adidas, &.Kinto, &.Jaguar {
                 position: absolute;
@@ -320,14 +321,45 @@ section.album > article > footer {
             }
             */
 
+  /*
+            img{
+                z-index: 10;
+                position: absolute;
+                bottom: 5px;
+                right: 15px;
+                display: block;
+                width: 90px;
+            }
+                */
+
 }
-section.album > article > footer img {
-  position: absolute;
-  bottom: 5px;
-  right: 15px;
-  display: block;
-  width: 90px;
-  height: 40px;
+section.album > article > footer li {
+  display: inline;
+  float: right;
+  margin-left: 10px;
+}
+section.album > article > footer li a {
+  font-family: 'Russo One', sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px #000000;
+}
+section.album > article > footer li a:hover {
+  color: black;
+  text-shadow: 0px 0px 10px #ffffff;
+}
+section.album > article > footer li.Homme,
+section.album > article > footer li.Femme,
+section.album > article > footer li.Enfant,
+section.album > article > footer li.Junior {
+  display: none;
 }
 section.album > footer {
   clear: both;

@@ -3,7 +3,7 @@
 <section class="album">
 
         <!-- Load this template's source data (album) and limit for pagination -->
-        <koken:load limit="9">
+        <koken:load infinite="true">
 
                 <h1>
                         {{ album.title }}
@@ -108,12 +108,14 @@
                                     <koken:img />
                             </section>
                                                         
-                                                                        
+                           <footer>    
+                           <ul>                                         
                                 <koken:categories>
                       <koken:loop> 
 
-                      <footer class="{{ category.title }}">    
-                            <koken:link>                                
+                      <li class="{{ category.title }}">    
+                            <koken:link>       
+                                  <!--                         
                                   <koken:load source="contents" filter:category="{{ category.title }}">
                                       <koken:loop>
                                         <koken:if data="content.title" equals="BRAND">
@@ -121,14 +123,16 @@
                                         </koken:if>
                                       </koken:loop>
                                     </koken:load>    
+                                    -->
                                <span>                                     
                                         {{ category.title }}                               
                                </span>
                             </koken:link>
-                        </footer>                                                
+                        </li>                                                
                       </koken:loop>
-                    </koken:categories>                                
-
+                    </koken:categories> 
+                    </ul>                               
+                </footer>
                         </article>        
 
                 </koken:loop>                        
