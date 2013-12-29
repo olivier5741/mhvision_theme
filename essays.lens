@@ -3,7 +3,7 @@
 <section class="essays">
 
      <!-- Load this template's source data (essays) and limit for pagination -->
-     <koken:load limit="5">
+     <koken:load infinite="true">
 
         <h1>
 

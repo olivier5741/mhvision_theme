@@ -1,9 +1,11 @@
 @import url('http://fonts.googleapis.com/css?family=Russo+One');
 
-@smallest: ~"only screen and (max-width: 300px)";
-@small: ~"only screen and (max-width: 440px)";
-@medium: ~"only screen and (min-width: 500px) and (max-width: 980px)";
-@biggest: ~"only screen and (min-width: 980px)";
+
+@small: ~"only screen and (max-width: 420px)";
+@medium: ~"only screen and (min-width: 420px) and (max-width: 650px)";
+@large: ~"only screen and (min-width: 650px) and (max-width: 850px)";
+@big: ~"only screen and (min-width: 850px) and (max-width: 970px)";
+@biggest: ~"only screen and (min-width: 970px)";
 
 @mhGreen: #AFCE53;
 @mhDarkGreen:#879F3B;
@@ -128,11 +130,11 @@ body {
     background-color: @mhGrey;
 
     >section {
-        @media @biggest {
+        @media @big, @biggest {
             margin-left:250px;
         }
 
-        @media @smallest {
+        @media @small, @medium, @large {
             margin-right:0px;
         }
     }
@@ -156,11 +158,11 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
 
-        @media @biggest{            
+        @media @big, @biggest{            
             position:absolute;
         }
 
-        @media @smallest, @small{            
+        @media @small, @medium, @large{            
             position:relative;
             margin:auto;
         }
@@ -227,17 +229,17 @@ body {
         >ul {
             >li {
                 float:left;
-                border: 10px solid white; @media @smallest {border: 3px solid white;} @media @small {border: 5px solid white;}
+                border: 10px solid white; @media @small {border: 5px solid white;}
                 margin:5px;
 
                 &:hover {
-                    border : 10px solid red; @media @smallest {border: 3px solid red;} @media @smallest {border: 5px solid red;}
+                    border : 10px solid red; @media @small {border: 5px solid red;}
                 }
 
                 >a{
                     img{
                         margin-bottom: -5px;
-                        height:50px; @media @smallest { height:30px;} @media @smallest { height:40px;}
+                        height:50px; @media @small { height:40px;}
                     }
                 }
             }
@@ -339,37 +341,48 @@ body {
     >article {
         .mhBorderRadius(15px);
         background-color: white;
+        min-width:250px;
         
         overflow:hidden;
 
         @media @biggest {
-            float: left;
+            //float: left;
+            display:inline-block;            
             position: relative;
             width: 300px;
             height: 220px; 
             padding: 10px;
-            margin: 10px;  
-        }
-        
-        @media @smallest {
-            width: 280px;
-            height: 200px; 
-            position:relative;
-            padding: 0px;
-            padding-top:10px;
-            margin-top: 10px;  
+            margin:10px;
+            margin-right: 10px;  
+            margin-left: 10px;  
         } 
 
         @media @small {
-            width:auto; 
-            height:auto;   
-            max-width:480px;
-            max-height:260px;      
+            width:100%;       
             position:relative;
             padding-top: 65%;
             box-sizing: border-box;
             margin-top: 10px;  
         } 
+
+        @media @medium {
+            width:400px;   
+            height:270px;    
+            position:relative;      
+            margin: auto;  
+            margin-top:10px; 
+        } 
+
+        @media @large, @big {
+            float:left;
+            width:48%;       
+            position:relative;
+            padding-top: 32%;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-left:0px;
+            margin-right:2%;
+        }
 
         >h1 {
             //display: inline;
@@ -426,8 +439,7 @@ body {
             position: absolute;
             z-index: 1;
 
-            >img {
-                max-width:500px;
+            >img {              
             }
         }
 
@@ -493,6 +505,7 @@ body {
 section.album{
 
     padding-top: 20px;
+    text-align:center;
 
     >h1{
         .mhFontRusso(40px,@mhBlue,bold);
@@ -538,6 +551,7 @@ section.album{
 
     >header.social-network{
         clear:both;
+        text-align:left;
         .mhTrebuchetMS(20px,black,none);
         margin-left:15px;
 
@@ -571,23 +585,23 @@ section.album{
 .documentationArticle(){
 
     >article{
+        
+        max-width:500px;       
+        text-align:left; 
+        
+        @media @biggest{
+            //display:inline-block;
+            //width:48%;
+        } 
 
-        /*
-        @media @tablet{
-            margin-left:auto;
-            margin-right:auto;
-            width:80%;
-            max-width:600px;
-        }
-            */
+        
 
-        /*
-        @media @desktop{
-            width:400px;
-            float:left;
-        }
-            */
-             
+        &:nth-child(2n+1){
+            float: right;
+            clear: right;
+        }  
+        
+        
         
 
         >h1:first-of-type{
@@ -631,11 +645,13 @@ section.album{
 }
 
 //MAIN ESSAY
-section.essays{
+section.essays {
+    text-align: center;
     .documentationArticle();
 
-    >footer.pagination{
-        text-align:center;
+    >footer.pagination {
+        clear:both;
+        text-align: center;
         .mainPagination();
     }
 }
