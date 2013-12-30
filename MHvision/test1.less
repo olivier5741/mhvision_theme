@@ -583,78 +583,92 @@ section.album{
 }
 
 //ARTICLE (Essay)
-.documentationArticle(){
+.documentationArticle() {
 
-    
-    >article{
-        
-        max-width:700px;       
-        text-align:left; 
-        
-        @media @veryBiggest{  
 
-            display:inline-block;
-            
-            width:45%;         
+    >article {
+        max-width: 700px;
+        text-align: left;
 
-            &:nth-child(2n+1){
-                padding-top:20px;
-                float:left;
-                clear:left;
+        @media @veryBiggest {
+
+            display:inline-block; width:45%; &:nth-child(2n+1) {
+                padding-top: 20px;
+                float: left;
+                clear: left;
             }
 
-            &:nth-child(2n){
-                margin-bottom:60px;
-                padding-top:20px;
-                margin-left:60px;
+            &:nth-child(2n) {
+                margin-bottom: 60px;
+                padding-top: 20px;
+                margin-left: 60px;
             }
 
-            &:last-of-type{
-                float:left;
-                clear:left;
+            &:last-of-type {
+                float: left;
+                clear: left;
             }
-        }  
+        }
 
-        >h1:first-of-type{
+        >h1:first-of-type {
             .mhFontRusso(40px,@mhBlue,bold);
-            margin:0px 0px -10px 5%;
+            margin: 0px 0px -10px 5%;
         }
 
         .MyHr();
 
-        >h1:not(:first-of-type){
+        >h1:not(:first-of-type) {
             .mhTrebuchetMS(20px,dark);
-            text-transform:uppercase;
-            text-align:center;
-            margin:20px 0px 0px 0px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 20px 0px 0px 0px;
         }
 
-        >h2{
+        >h2 {
             .mhFontRusso(15px,@mhBlue);
-            margin:0px 0px 0px 10%;
+            margin: 0px 0px 0px 10%;
         }
 
-        >p{
+        >p {
             .mhTrebuchetMS(12px,black);
-            margin:10px 0px 10px 5%;
+            margin: 10px 0px 10px 5%;
         }
 
-        >div{
-            text-align:center;
+        >div {
+            text-align: center;
         }
 
-        ul{
-            list-style:circle;
-            margin-left:20%;           
+        em {
+            color: @mhBlue;
+            font-weight: bold;
+        }
 
-            >li{
-                text-align:left;
-                margin-bottom:5px;
+        ul:not(.image-mosaique) {
+            list-style: circle;
+            margin-left: 20%;
+
+            >li {
+                text-align: left;
+                margin-bottom: 5px;
             }
         }
 
-        figure > div{
-            text-align:center;
+        ul.image-mosaique {
+            display: inline-block;
+
+            li {
+
+                > span {
+                    display: block;
+                    float:left;
+                    clear:left;
+                }
+            }
+        }
+
+
+        figure > div {
+            text-align: center;
         }
     }
 }

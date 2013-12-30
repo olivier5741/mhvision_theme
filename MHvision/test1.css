@@ -547,13 +547,25 @@ section.essays > article > p {
 section.essays > article > div {
   text-align: center;
 }
-section.essays > article ul {
+section.essays > article em {
+  color: #004c5b;
+  font-weight: bold;
+}
+section.essays > article ul:not(.image-mosaique) {
   list-style: circle;
   margin-left: 20%;
 }
-section.essays > article ul > li {
+section.essays > article ul:not(.image-mosaique) > li {
   text-align: left;
   margin-bottom: 5px;
+}
+section.essays > article ul.image-mosaique {
+  display: inline-block;
+}
+section.essays > article ul.image-mosaique li > span {
+  display: block;
+  float: left;
+  clear: left;
 }
 section.essays > article figure > div {
   text-align: center;
