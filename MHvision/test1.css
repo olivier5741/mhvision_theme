@@ -466,26 +466,35 @@ section.album > footer > nav > ul > li > a.k-pagination-current {
   border: 2px solid #004c5b;
   padding: 0px 10px;
 }
-section.essays {
-  text-align: center;
-}
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 970px) and (max-width: 1350px) {
   section.essays {
-    max-width: 1200px;
+    padding-left: 5%;
+    text-align: left;
   }
 }
 section.essays > article {
-  max-width: 500px;
+  max-width: 700px;
   text-align: left;
 }
 @media only screen and (min-width: 1350px) {
   section.essays > article {
-    width: 48%;
+    display: inline-block;
+    width: 45%;
   }
-}
-section.essays > article:nth-child(2n+1) {
-  float: right;
-  clear: right;
+  section.essays > article:nth-child(2n+1) {
+    padding-top: 20px;
+    float: left;
+    clear: left;
+  }
+  section.essays > article:nth-child(2n) {
+    margin-bottom: 60px;
+    padding-top: 20px;
+    margin-left: 60px;
+  }
+  section.essays > article:last-of-type {
+    float: left;
+    clear: left;
+  }
 }
 section.essays > article > h1:first-of-type {
   font-family: 'Russo One', sans-serif;
@@ -545,6 +554,9 @@ section.essays > article ul {
 section.essays > article ul > li {
   text-align: left;
   margin-bottom: 5px;
+}
+section.essays > article figure > div {
+  text-align: center;
 }
 section.essays > footer.pagination {
   clear: both;

@@ -585,29 +585,35 @@ section.album{
 //ARTICLE (Essay)
 .documentationArticle(){
 
-    @media @veryBiggest{
-      max-width:1200px;
-    }
-
+    
     >article{
         
-        max-width:500px;       
+        max-width:700px;       
         text-align:left; 
         
-        @media @veryBiggest{
-            width:48%;
+        @media @veryBiggest{  
 
-        } 
+            display:inline-block;
+            
+            width:45%;         
 
-        
+            &:nth-child(2n+1){
+                padding-top:20px;
+                float:left;
+                clear:left;
+            }
 
-        &:nth-child(2n+1){
-            float: right;
-            clear: right;
+            &:nth-child(2n){
+                margin-bottom:60px;
+                padding-top:20px;
+                margin-left:60px;
+            }
+
+            &:last-of-type{
+                float:left;
+                clear:left;
+            }
         }  
-        
-        
-        
 
         >h1:first-of-type{
             .mhFontRusso(40px,@mhBlue,bold);
@@ -646,12 +652,18 @@ section.album{
                 margin-bottom:5px;
             }
         }
+
+        figure > div{
+            text-align:center;
+        }
     }
 }
 
 //MAIN ESSAY
 section.essays {
-    text-align: center;
+
+    @media @biggest{padding-left:5%; text-align:left;}
+    
     .documentationArticle();
 
     >footer.pagination {
