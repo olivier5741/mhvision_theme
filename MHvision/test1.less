@@ -654,15 +654,45 @@ section.album{
         }
 
         ul.image-mosaique {
-            display: inline-block;
+            
+            margin-left:30px;
 
             li {
 
-                > span {
-                    display: block;
-                    float:left;
-                    clear:left;
+                display: inline-block;
+                margin:10px;
+
+                >div{
+                    float:left;  
+                    
+                    figure{
+                        margin:0px;
+                        margin-right:2px;
+                        margin-top:5px;
+                        padding:0px;
+                    }              
                 }
+
+                > span{
+                    display:block;
+                }
+
+                >span.MediumBlueTitle{
+                    color:@mhBlue;
+                    font-weight:bold;
+                }
+
+                >span.SmallBlackTitle{
+                    font-style:italic;
+                }
+
+                >span.SmallWhiteText{
+                    color:white;
+                }
+
+                clear:left;
+
+                
             }
         }
 

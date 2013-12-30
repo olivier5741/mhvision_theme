@@ -560,12 +560,34 @@ section.essays > article ul:not(.image-mosaique) > li {
   margin-bottom: 5px;
 }
 section.essays > article ul.image-mosaique {
+  margin-left: 30px;
+}
+section.essays > article ul.image-mosaique li {
   display: inline-block;
+  margin: 10px;
+  clear: left;
+}
+section.essays > article ul.image-mosaique li > div {
+  float: left;
+}
+section.essays > article ul.image-mosaique li > div figure {
+  margin: 0px;
+  margin-right: 2px;
+  margin-top: 5px;
+  padding: 0px;
 }
 section.essays > article ul.image-mosaique li > span {
   display: block;
-  float: left;
-  clear: left;
+}
+section.essays > article ul.image-mosaique li > span.MediumBlueTitle {
+  color: #004c5b;
+  font-weight: bold;
+}
+section.essays > article ul.image-mosaique li > span.SmallBlackTitle {
+  font-style: italic;
+}
+section.essays > article ul.image-mosaique li > span.SmallWhiteText {
+  color: white;
 }
 section.essays > article figure > div {
   text-align: center;
