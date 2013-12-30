@@ -10,7 +10,7 @@ a {
 body {
   background-color: #dfdfdf;
 }
-@media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) {
+@media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > section {
     margin-left: 250px;
   }
@@ -38,7 +38,7 @@ body > nav {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-@media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) {
+@media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > nav {
     position: absolute;
   }
@@ -259,7 +259,7 @@ section.album > article {
   min-width: 250px;
   overflow: hidden;
 }
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   section.album > article {
     display: inline-block;
     position: relative;
@@ -469,12 +469,19 @@ section.album > footer > nav > ul > li > a.k-pagination-current {
 section.essays {
   text-align: center;
 }
+@media only screen and (min-width: 1350px) {
+  section.essays {
+    max-width: 1200px;
+  }
+}
 section.essays > article {
   max-width: 500px;
   text-align: left;
 }
-@media only screen and (min-width: 970px) {
-  
+@media only screen and (min-width: 1350px) {
+  section.essays > article {
+    width: 48%;
+  }
 }
 section.essays > article:nth-child(2n+1) {
   float: right;

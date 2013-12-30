@@ -5,7 +5,8 @@
 @medium: ~"only screen and (min-width: 420px) and (max-width: 650px)";
 @large: ~"only screen and (min-width: 650px) and (max-width: 850px)";
 @big: ~"only screen and (min-width: 850px) and (max-width: 970px)";
-@biggest: ~"only screen and (min-width: 970px)";
+@biggest: ~"only screen and (min-width: 970px) and (max-width: 1350px)";
+@veryBiggest: ~"only screen and (min-width: 1350px)";
 
 @mhGreen: #AFCE53;
 @mhDarkGreen:#879F3B;
@@ -130,7 +131,7 @@ body {
     background-color: @mhGrey;
 
     >section {
-        @media @big, @biggest {
+        @media @big, @biggest, @veryBiggest {
             margin-left:250px;
         }
 
@@ -158,7 +159,7 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
 
-        @media @big, @biggest{            
+        @media @big, @biggest, @veryBiggest{            
             position:absolute;
         }
 
@@ -345,7 +346,7 @@ body {
         
         overflow:hidden;
 
-        @media @biggest {
+        @media @biggest, @veryBiggest {
             //float: left;
             display:inline-block;            
             position: relative;
@@ -584,14 +585,18 @@ section.album{
 //ARTICLE (Essay)
 .documentationArticle(){
 
+    @media @veryBiggest{
+      max-width:1200px;
+    }
+
     >article{
         
         max-width:500px;       
         text-align:left; 
         
-        @media @biggest{
-            //display:inline-block;
-            //width:48%;
+        @media @veryBiggest{
+            width:48%;
+
         } 
 
         
