@@ -561,14 +561,18 @@ section.essays > article ul:not(.image-mosaique) > li {
 }
 section.essays > article ul.image-mosaique {
   margin-left: 30px;
+  text-align: center;
 }
 section.essays > article ul.image-mosaique li {
+  text-align: left;
   display: inline-block;
   margin: 10px;
   clear: left;
 }
 section.essays > article ul.image-mosaique li > div {
   float: left;
+  width: 40px;
+  height: 30px;
 }
 section.essays > article ul.image-mosaique li > div figure {
   margin: 0px;
