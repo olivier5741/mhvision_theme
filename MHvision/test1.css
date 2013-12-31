@@ -492,7 +492,6 @@ section.essays > article {
     margin-left: 60px;
   }
   section.essays > article:last-of-type {
-    float: left;
     clear: left;
   }
 }
