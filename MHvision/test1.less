@@ -4,8 +4,8 @@
 @small: ~"only screen and (max-width: 420px)";
 @medium: ~"only screen and (min-width: 420px) and (max-width: 650px)";
 @large: ~"only screen and (min-width: 650px) and (max-width: 850px)";
-@big: ~"only screen and (min-width: 850px) and (max-width: 970px)";
-@biggest: ~"only screen and (min-width: 970px) and (max-width: 1350px)";
+@big: ~"only screen and (min-width: 850px) and (max-width: 1015px)";
+@biggest: ~"only screen and (min-width: 1015px) and (max-width: 1350px)";
 @veryBiggest: ~"only screen and (min-width: 1350px)";
 
 @mhGreen: #AFCE53;
@@ -132,7 +132,18 @@ body {
 
     >section {
         @media @big, @biggest, @veryBiggest {
-            margin-left:250px;
+            //margin-left:250px;
+            margin-left:20px;
+            width:80%;
+            float:left;
+        }
+
+        @media @big {
+            width:70%;
+        }
+
+         @media  @biggest {
+            width:72%;
         }
 
         @media @small, @medium, @large {
@@ -147,8 +158,19 @@ body {
         width: 200px;
         text-align: center;
         margin-bottom:10px;
-        float:left;
-        clear:left;
+        
+
+        @media @big, @biggest, @veryBiggest{            
+            position:absolute;
+            
+            //float:left;
+        }
+
+        @media @small, @medium, @large{            
+            //position:relative;
+            margin:auto;
+        }
+
         >a{
             >div.logo >object {
                 width: 150px;
@@ -168,13 +190,12 @@ body {
         padding-bottom: 20px;
 
         @media @big, @biggest, @veryBiggest{            
-            //position:absolute;
             float:left;
-            clear:left;
+            margin-top:135px;
         }
 
         @media @small, @medium, @large{            
-            position:relative;
+            //position:relative;
             margin:auto;
         }
 
@@ -250,6 +271,7 @@ body {
                 >a{
                     img{
                         margin-bottom: -5px;
+                        width:auto;
                         height:50px; @media @small { height:40px;}
                     }
                 }
@@ -262,6 +284,7 @@ body {
 //MAIN FOOTER
 body {
     >footer {
+        clear:both;
         >nav {
             .mhTrebuchetMS(20px,black,bold);
             text-transform: uppercase;
@@ -561,7 +584,7 @@ section.album{
     }
 
     >header.social-network{
-        clear:both;
+        clear:right;
         text-align:left;
         .mhTrebuchetMS(20px,black,none);
         margin-left:15px;

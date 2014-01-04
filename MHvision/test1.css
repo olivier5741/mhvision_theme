@@ -10,9 +10,21 @@ a {
 body {
   background-color: #dfdfdf;
 }
-@media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
+@media only screen and (min-width: 850px) and (max-width: 1015px), only screen and (min-width: 1015px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > section {
-    margin-left: 250px;
+    margin-left: 20px;
+    width: 80%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 850px) and (max-width: 1015px) {
+  body > section {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1015px) and (max-width: 1350px) {
+  body > section {
+    width: 72%;
   }
 }
 @media only screen and (max-width: 420px), only screen and (min-width: 420px) and (max-width: 650px), only screen and (min-width: 650px) and (max-width: 850px) {
@@ -24,8 +36,16 @@ body > header {
   width: 200px;
   text-align: center;
   margin-bottom: 10px;
-  float: left;
-  clear: left;
+}
+@media only screen and (min-width: 850px) and (max-width: 1015px), only screen and (min-width: 1015px) and (max-width: 1350px), only screen and (min-width: 1350px) {
+  body > header {
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 420px), only screen and (min-width: 420px) and (max-width: 650px), only screen and (min-width: 650px) and (max-width: 850px) {
+  body > header {
+    margin: auto;
+  }
 }
 body > header > a > div.logo > object {
   width: 150px;
@@ -46,15 +66,14 @@ body > nav {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-@media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
+@media only screen and (min-width: 850px) and (max-width: 1015px), only screen and (min-width: 1015px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > nav {
     float: left;
-    clear: left;
+    margin-top: 135px;
   }
 }
 @media only screen and (max-width: 420px), only screen and (min-width: 420px) and (max-width: 650px), only screen and (min-width: 650px) and (max-width: 850px) {
   body > nav {
-    position: relative;
     margin: auto;
   }
 }
@@ -99,6 +118,9 @@ body > nav > ul > li > ul > li > a {
 }
 body > nav > ul > li > ul > li > a:hover {
   background-color: #879f3b;
+}
+body > footer {
+  clear: both;
 }
 body > footer > nav {
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
@@ -153,6 +175,7 @@ body > footer > section.brand > ul > li:hover {
 }
 body > footer > section.brand > ul > li > a img {
   margin-bottom: -5px;
+  width: auto;
   height: 50px;
 }
 @media only screen and (max-width: 420px) {
@@ -209,7 +232,7 @@ section.album > header.album-navigation > span.next a:hover {
   font-weight: bold;
 }
 section.album > header.social-network {
-  clear: both;
+  clear: right;
   text-align: left;
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
   font-size: 20px;
@@ -268,7 +291,7 @@ section.album > article {
   min-width: 250px;
   overflow: hidden;
 }
-@media only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1015px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   section.album > article {
     display: inline-block;
     position: relative;
@@ -298,7 +321,7 @@ section.album > article {
     margin-top: 10px;
   }
 }
-@media only screen and (min-width: 650px) and (max-width: 850px), only screen and (min-width: 850px) and (max-width: 970px) {
+@media only screen and (min-width: 650px) and (max-width: 850px), only screen and (min-width: 850px) and (max-width: 1015px) {
   section.album > article {
     float: left;
     width: 48%;
@@ -475,7 +498,7 @@ section.album > footer > nav > ul > li > a.k-pagination-current {
   border: 2px solid #004c5b;
   padding: 0px 10px;
 }
-@media only screen and (min-width: 970px) and (max-width: 1350px) {
+@media only screen and (min-width: 1015px) and (max-width: 1350px) {
   section.essays {
     padding-left: 5%;
     text-align: left;
