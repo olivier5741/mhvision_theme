@@ -53,6 +53,26 @@
     border-bottom-left-radius: @radius;
 }
 
+.upBorderRadius(@radius:10px){
+    -webkit-border-top-left-radius: @radius;
+    -moz-border-top-left-radius: @radius;
+    border-top-left-radius: @radius;
+
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-top-right-radius: @radius;
+    border-top-right-radius: @radius;
+}
+
+.downBorderRadius(@radius:10px){
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-bottom-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-bottom-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
 .alpha60() {
     /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(255, 255, 255) transparent;
@@ -158,7 +178,10 @@ body {
         width: 200px;
         text-align: center;
         margin-bottom:10px;
-        
+
+        @media @small, @medium{            
+            display:none;
+        }        
 
         @media @big, @biggest, @veryBiggest{            
             position:absolute;
@@ -171,10 +194,21 @@ body {
             margin:auto;
         }
 
+        @media @large{
+            float:left;
+            text-align:left;
+            width:100px;
+        }
+
         >a{
             >div.logo >object {
                 width: 150px;
                 height: 120px;
+                @media @large{
+                    width: 100px;
+                    height: 80px;
+                    margin-top:25px;
+                }
             }
         }        
     }
@@ -183,26 +217,45 @@ body {
         .mhTrebuchetMS(@baseFontSize,white);
         text-transform: uppercase;
         text-align: center;
-        background-color: @mhGreen;
-        width: 200px;
-        .mhBorderRadius(50px);
+        background-color: @mhGreen;         
         padding-top: 20px;
         padding-bottom: 20px;
+        
 
         @media @big, @biggest, @veryBiggest{            
             float:left;
             margin-top:135px;
+            width: 200px;
+            .mhBorderRadius(50px);
         }
 
-        @media @small, @medium, @large{            
+        @media @small, @medium{            
             //position:relative;
             margin:auto;
+            width:100%;
+            .mhBorderRadius(30px);
+        }
+
+        @media @large{
+            width:80%;
+            margin-left:15px;
+            .mhBorderRadius(30px);     
+            clear:left;
+            display:inline-block;     
         }
 
         >ul {
-
+            display:block;
             width:80%;
             margin: 0px auto;
+
+            @media @small, @medium, @large{ 
+              width:100%;
+              padding-right: 5px;
+              padding-left: 5px;
+            }
+
+            
 
             >li {
 
@@ -210,6 +263,12 @@ body {
                 margin-bottom: 5px;
                 padding-bottom: 2px;
                 border-bottom: 1px dotted white;
+
+                @media @small, @medium, @large{ 
+                    display:inline-block;
+                    margin-left:8px; 
+                    margin-right:8px; 
+                }
 
                 &:last-child{
                     //border-bottom:none;
@@ -223,12 +282,46 @@ body {
                         color:white;
                         font-weight:bold;
                     }
+
+                    @media @small, @medium, @large{
+                        &:not(.k-nav-open) + ul{
+                            display:none !important;
+                            z-index:100;
+                        }
+
+                        &.k-nav-open{
+                            background-color:white;
+                            .upBorderRadius;
+                            border-left : solid 2px @mhGreen;  
+                            border-right : solid 2px @mhGreen;  
+                            border-top : solid 2px @mhGreen;  
+                            padding:3px;                            
+                        }
+
+                        &:hover{
+                            color:@mhDarkGreen;
+                            font-weight:bold;
+                        }
+                    }
+                    
                 }                               
 
                 >ul {
 
                     width:70%;
                     margin-left:auto;
+
+                    @media @small, @medium, @large{ 
+                        position:absolute;
+                        width:100px;
+                        background-color:white;      
+                        .downBorderRadius(10px);  
+                        border-left : solid 2px @mhGreen;  
+                        border-right : solid 2px @mhGreen;  
+                        border-bottom : solid 2px @mhGreen;                                  
+                    }     
+                    
+                             
 
                     >li {                        
                         >a {
@@ -376,6 +469,8 @@ body {
         .mhBorderRadius(15px);
         background-color: white;
         min-width:250px;
+        padding-left:10px;
+        padding-right:10px;
         
         overflow:hidden;
 
@@ -409,7 +504,7 @@ body {
 
         @media @large, @big {
             float:left;
-            width:48%;       
+            width:48%;           
             position:relative;
             padding-top: 32%;
             box-sizing: border-box;
