@@ -414,13 +414,13 @@ section.album > article {
 @media only screen and (min-width: 650px) and (max-width: 850px), only screen and (min-width: 850px) and (max-width: 1015px) {
   section.album > article {
     float: left;
-    width: 48%;
+    width: 45%;
     position: relative;
     padding-top: 32%;
     box-sizing: border-box;
     margin-top: 10px;
     margin-left: 0px;
-    margin-right: 2%;
+    margin-right: 5px;
   }
 }
 section.album > article > h1 {
