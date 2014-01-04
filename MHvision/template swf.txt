@@ -4,21 +4,21 @@ $(function(){
 {
     var params = {};
     params.wmode = "transparent";
-    swfobject.embedSWF("/animation/loin.swf", "loin", "497", "253", "9.0.0", {}, {}, params);
+    swfobject.embedSWF("/animation/solaire.swf", "solaire", "497", "253", "9.0.0", {}, {}, params);
 
     $.getScript("https://raw.github.com/morr/jquery.appear/master/jquery.appear.js", function()
 	{
                 var counter = 0;
-		$('div#loin-container').appear();
-		$('div#loin-container').on("appear",function() {
+		$('div#solaire-container').appear();
+		$('div#solaire-container').on("appear",function() {
                         if(counter == 0){
-      			   setTimeout(function() {swfobject.getObjectById('loin').Play();}, 2500);
+      			   setTimeout(function() {swfobject.getObjectById('solaire').Play();}, 2500);
                         }
                         counter ++;
     		});
 
-		$( "div#loin-container" ).click(function() {
-			swfobject.getObjectById('loin').Play();
+		$( "div#solaire-container" ).click(function() {
+			swfobject.getObjectById('solaire').Play();
 		});
 		
 
@@ -28,8 +28,8 @@ $(function(){
     });
 </script>
 
-<div id="loin-container">
-    <div id="loin">
+<div id="solaire-container">
+    <div id="solaire">
         
     </div>
 </div>

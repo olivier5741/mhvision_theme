@@ -144,9 +144,17 @@ body {
 // MAIN HEADER
 body {
     >header {
-        >div.logo {
-            width: 200px;
-        }
+        width: 200px;
+        text-align: center;
+        margin-bottom:10px;
+        float:left;
+        clear:left;
+        >a{
+            >div.logo >object {
+                width: 150px;
+                height: 120px;
+            }
+        }        
     }
 
     >nav {
@@ -160,7 +168,9 @@ body {
         padding-bottom: 20px;
 
         @media @big, @biggest, @veryBiggest{            
-            position:absolute;
+            //position:absolute;
+            float:left;
+            clear:left;
         }
 
         @media @small, @medium, @large{            

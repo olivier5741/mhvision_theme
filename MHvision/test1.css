@@ -20,8 +20,16 @@ body {
     margin-right: 0px;
   }
 }
-body > header > div.logo {
+body > header {
   width: 200px;
+  text-align: center;
+  margin-bottom: 10px;
+  float: left;
+  clear: left;
+}
+body > header > a > div.logo > object {
+  width: 150px;
+  height: 120px;
 }
 body > nav {
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
@@ -40,7 +48,8 @@ body > nav {
 }
 @media only screen and (min-width: 850px) and (max-width: 970px), only screen and (min-width: 970px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > nav {
-    position: absolute;
+    float: left;
+    clear: left;
   }
 }
 @media only screen and (max-width: 420px), only screen and (min-width: 420px) and (max-width: 650px), only screen and (min-width: 650px) and (max-width: 850px) {
