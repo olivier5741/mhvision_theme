@@ -209,6 +209,17 @@ body > nav > ul > li > ul > li > a:hover {
 }
 body > footer {
   clear: both;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-top: 40px;
+  background-color: white;
+  border-top: solid 10px #004C5B;
+  border-left: solid 10px #004C5B;
+  border-right: solid 10px #004C5B;
+  position: relative;
+  top: 50px;
 }
 body > footer > nav {
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
@@ -243,8 +254,11 @@ body > footer section.description p {
   text-align: center;
   font-weight: bold;
 }
+body > footer > section.brand > ul {
+  text-align: center;
+}
 body > footer > section.brand > ul > li {
-  float: left;
+  display: inline-block;
   border: 10px solid white;
   margin: 5px;
 }
@@ -262,7 +276,7 @@ body > footer > section.brand > ul > li:hover {
   }
 }
 body > footer > section.brand > ul > li > a img {
-  margin-bottom: -5px;
+  margin-bottom: -6px;
   width: auto;
   height: 50px;
 }

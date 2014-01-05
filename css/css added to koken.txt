@@ -1,0 +1,5 @@
+section.album img{
+ 
+   [if IE] width:300px; 
+
+}

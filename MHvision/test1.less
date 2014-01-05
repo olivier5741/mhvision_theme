@@ -352,8 +352,9 @@ body {
 .mainBrand() {
     >section.brand {
         >ul {
+            text-align:center;
             >li {
-                float:left;
+                display:inline-block;
                 border: 10px solid white; @media @small {border: 5px solid white;}
                 margin:5px;
 
@@ -363,7 +364,7 @@ body {
 
                 >a{
                     img{
-                        margin-bottom: -5px;
+                        margin-bottom: -6px;
                         width:auto;
                         height:50px; @media @small { height:40px;}
                     }
@@ -378,6 +379,18 @@ body {
 body {
     >footer {
         clear:both;
+        font-size:20px;
+        margin-top:30px;
+        margin-left:-8px;
+        margin-right:-8px;
+        padding-top:40px;
+        background-color:white;
+        border-top: solid 10px #004C5B;
+        border-left: solid 10px #004C5B;
+        border-right: solid 10px #004C5B;
+        position:relative;
+        top:50px;
+
         >nav {
             .mhTrebuchetMS(20px,black,bold);
             text-transform: uppercase;
@@ -564,11 +577,12 @@ body {
 
         >section {
 
-            .is-Transformed();
+            .is-Transformed();            
             position: absolute;
             z-index: 1;
 
-            >img {              
+            >img {   
+                       
             }
         }
 
