@@ -59,12 +59,26 @@ body > header {
     width: 100px;
   }
 }
-body > header > a > div.logo > object {
+body > header > a {
+  width: 150px;
+  height: 120px;
+  left: 0px;
+  position: absolute;
+  z-index: 100;
+}
+@media only screen and (min-width: 650px) and (max-width: 850px) {
+  body > header > a {
+    width: 100px;
+    height: 80px;
+    margin-top: 25px;
+  }
+}
+body > header > div.logo > object {
   width: 150px;
   height: 120px;
 }
 @media only screen and (min-width: 650px) and (max-width: 850px) {
-  body > header > a > div.logo > object {
+  body > header > div.logo > object {
     width: 100px;
     height: 80px;
     margin-top: 25px;
@@ -80,6 +94,7 @@ body > nav {
   background-color: #afce53;
   padding-top: 20px;
   padding-bottom: 20px;
+  z-index: 1000;
 }
 @media only screen and (min-width: 850px) and (max-width: 1015px), only screen and (min-width: 1015px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > nav {
@@ -170,6 +185,7 @@ body > nav > ul > li > a:hover {
 body > nav > ul > li > ul {
   width: 70%;
   margin-left: auto;
+  z-index: 1000;
 }
 @media only screen and (max-width: 420px), only screen and (min-width: 420px) and (max-width: 650px), only screen and (min-width: 650px) and (max-width: 850px) {
   body > nav > ul > li > ul {
@@ -354,8 +370,10 @@ section.album > header.social-network > a:hover {
 section.album > hr {
   display: block;
   height: 2px;
+  color: #004c5b;
   background-color: #004c5b;
   width: 100%;
+  clear: both;
 }
 section.album > header.pagination {
   text-align: center;
@@ -647,8 +665,10 @@ section.essays > article > h1:first-of-type {
 section.essays > article > hr {
   display: block;
   height: 2px;
+  color: #004c5b;
   background-color: #004c5b;
   width: 100%;
+  clear: both;
 }
 section.essays > article > h1:not(:first-of-type) {
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
@@ -760,8 +780,12 @@ section.essays > footer.pagination > nav > ul > li > a.k-pagination-current {
   border: 2px solid #004c5b;
   padding: 0px 10px;
 }
+section.page h1 {
+  text-align: left;
+}
 section.page article {
   width: 80%;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -782,8 +806,10 @@ section.page article h1 {
 section.page article > hr {
   display: block;
   height: 2px;
+  color: #004c5b;
   background-color: #004c5b;
   width: 100%;
+  clear: both;
 }
 section.page article section {
   text-align: center;
@@ -791,18 +817,26 @@ section.page article section {
 section.page > hr {
   display: block;
   height: 2px;
+  color: #004c5b;
   background-color: #004c5b;
   width: 100%;
+  clear: both;
+}
+section.page {
+  margin-top: 20px;
 }
 section.page > article {
-  width: 80%;
+  width: 95%;
+  margin: auto;
+  text-align: center;
 }
 section.page > article > section {
-  float: left;
   margin-top: 30px;
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: top;
 }
 section.page > article > section.contact {
-  margin-left: 50px;
   height: 370px;
   font-family: "trebuchet ms", Verdana, Tahoma, sans-serif;
   font-size: 15px;
@@ -862,6 +896,5 @@ section.page > article > section.map object {
   width: 400px;
   height: 400px;
   background-color: #004c5b;
-  margin-left: 20px;
   padding: 10px;
 }

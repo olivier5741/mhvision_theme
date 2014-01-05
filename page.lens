@@ -18,8 +18,6 @@
 
 	</koken:load>
 
-	<hr />
-
 </section> <!-- close #content -->
 
 <koken:include file="inc/footer.html" />

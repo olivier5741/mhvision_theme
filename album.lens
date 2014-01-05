@@ -102,7 +102,7 @@
                                         </koken:loop>
                                     </ul>  
                                 </header>
-                    </koken:categories>
+                                </koken:categories>
                             
                             <section data-koken-ignore-responsive="true" >                              
                                     <koken:img />

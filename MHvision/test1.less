@@ -130,8 +130,10 @@ text-shadow:
     >hr{
         display:block;
         height:2px;
+        color:@mhBlue;
         background-color:@mhBlue;
         width:@width;
+        clear:both;
 
     }
 }
@@ -201,16 +203,28 @@ body {
         }
 
         >a{
-            >div.logo >object {
-                width: 150px;
-                height: 120px;
-                @media @large{
-                    width: 100px;
-                    height: 80px;
-                    margin-top:25px;
-                }
+            width: 150px;
+            height: 120px;
+            left:0px;
+            position:absolute;
+            z-index:100;
+            @media @large{
+                width: 100px;
+                height: 80px;
+                margin-top:25px;
             }
-        }        
+          }
+
+        >div.logo >object {
+            width: 150px;
+            height: 120px;
+            @media @large{
+                width: 100px;
+                height: 80px;
+                margin-top:25px;
+            }
+        }
+                
     }
 
     >nav {
@@ -220,6 +234,7 @@ body {
         background-color: @mhGreen;         
         padding-top: 20px;
         padding-bottom: 20px;
+        z-index:1000;
         
 
         @media @big, @biggest, @veryBiggest{            
@@ -310,6 +325,7 @@ body {
 
                     width:70%;
                     margin-left:auto;
+                    z-index:1000;
 
                     @media @small, @medium, @large{ 
                         position:absolute;
@@ -483,8 +499,7 @@ body {
         background-color: white;
         min-width:250px;
         padding-left:10px;
-        padding-right:10px;
-        
+        padding-right:10px;     
         overflow:hidden;
 
         @media @biggest, @veryBiggest {
@@ -581,8 +596,7 @@ body {
             position: absolute;
             z-index: 1;
 
-            >img {   
-                       
+            >img {      
             }
         }
 
@@ -866,12 +880,13 @@ section.essays {
 section.page {
 
     h1 {
-        
+        text-align:left;
     }
 
     article{
 
         width:80%;
+        display:inline-block;
         margin-left:auto;
         margin-right:auto;
 
@@ -898,17 +913,24 @@ section.page {
 
 //CONTACT PAGE
 section.page {
-    >article{       
 
-        width:80%;
+    margin-top:20px;
 
+    >article{  
+        
+        width:95%;
+        margin:auto;    
+        text-align:center;         
+        
         >section{
-            float:left;
             margin-top: 30px;
+            margin-left:20px;
+            display:inline-block;
+            vertical-align: top; 
+            //float:left;
         }
 
         >section.contact{        
-            margin-left:50px;     
             height:370px;         
             .mhTrebuchetMS(15px,black,bold);
             text-transform:uppercase;
@@ -985,7 +1007,6 @@ section.page {
                 width:400px;
                 height:400px;
                 background-color:@mhBlue;
-                margin-left:20px;
                 padding:10px;
             }
         }
