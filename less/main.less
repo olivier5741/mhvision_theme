@@ -190,12 +190,9 @@ body {
 
         @media @big, @biggest, @veryBiggest{            
             position:absolute;
-            
-            //float:left;
         }
 
-        @media @small, @medium, @large{            
-            //position:relative;
+        @media @small, @medium, @large{  
             margin:auto;
         }
 
@@ -247,8 +244,7 @@ body {
             .mhBorderRadius(50px);
         }
 
-        @media @small, @medium{            
-            //position:relative;
+        @media @small, @medium{  
             margin:auto;
             width:100%;
             .mhBorderRadius(30px);
@@ -289,7 +285,6 @@ body {
                 }
 
                 &:last-child{
-                    //border-bottom:none;
                 }
 
                 >a {
@@ -472,8 +467,6 @@ body {
 
                     &:hover {
                         text-decoration: underline;
-                        //text-decoration-color: @mhBlue;
-                        //text-decoration-size: 5px;
                     }
 
                     &.k-pagination-current {
@@ -506,7 +499,6 @@ body {
         overflow:hidden;
 
         @media @biggest, @veryBiggest {
-            //float: left;
             display:inline-block;            
             position: relative;
             width: 300px;
@@ -545,8 +537,6 @@ body {
         }
 
         >h1 {
-            //display: inline;
-            //float:left;
             margin: 2px 0 0 5px;
             .mhFontRusso(20px,black);
             .mhBorderRadius(10px);
@@ -627,36 +617,7 @@ body {
                 &.Homme, &.Femme, &.Enfant, &.Junior {
                     display: none;
                 }
-            }
-            /*
-            &.Dutz, &.Adidas, &.Kinto, &.Jaguar {
-                position: absolute;
-                bottom: 5px;
-                right: 15px;
-                display: block;
-
-                a {
-                    img {
-                        width: 90px;
-                        height:40px;
-                    }
-
-                    span {
-                        display: none;
-                    }
-                }
-            }
-            */
-            /*
-            img{
-                z-index: 10;
-                position: absolute;
-                bottom: 5px;
-                right: 15px;
-                display: block;
-                width: 90px;
-            }
-                */
+            }            
         }
     }
 }
