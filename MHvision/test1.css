@@ -10,6 +10,9 @@ a {
 body {
   background-color: #dfdfdf;
 }
+body > section {
+  margin-top: 20px;
+}
 @media only screen and (min-width: 850px) and (max-width: 1015px), only screen and (min-width: 1015px) and (max-width: 1350px), only screen and (min-width: 1350px) {
   body > section {
     margin-left: 20px;
